@@ -9,6 +9,7 @@ import About from './pages/About';
 import Services from './pages/Services';
 import Careers from './pages/Careers';
 import Projects from './pages/Projects';
+import ApplyForm from './components/ApplyForm.jsx';
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,7 @@ const router = createBrowserRouter([
       { path: 'services', element: <Services /> },
       { path: 'projects', element: <Projects /> },
       { path: 'careers', element: <Careers /> },
+      { path: 'apply-form', element: <ApplyForm /> },
       { path: 'contact', element: <Contact /> },
     ],
   },

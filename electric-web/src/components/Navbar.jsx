@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Linkedin, Facebook, Menu, X } from "lucide-react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -35,15 +35,17 @@ const Navbar = () => {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex gap-6 items-center text-sm font-medium">
           {navItems.map(({ name, path }) => (
-            <Link
+            <NavLink
               key={name}
               to={path}
-              className={`hover:text-orange-500 ${
-                name === "Home" ? "text-orange-500" : ""
-              }`}
+              className={({ isActive }) =>
+                isActive
+                  ? "text-orange-500"
+                  : "text-white hover:text-orange-500"
+              }
             >
               {name}
-            </Link>
+            </NavLink>
           ))}
           <div className="flex gap-2 ml-4">
             <a
@@ -75,16 +77,18 @@ const Navbar = () => {
       {isOpen && (
         <div className="md:hidden bg-[#04182B] px-4 pb-4 space-y-3 text-sm font-medium">
           {navItems.map(({ name, path }) => (
-            <Link
+            <NavLink
               key={name}
               to={path}
-              className={`block ${
-                name === "Home" ? "text-orange-500" : "text-white"
-              }`}
               onClick={() => setIsOpen(false)}
+              className={({ isActive }) =>
+                isActive
+                  ? "block text-orange-500"
+                  : "block text-white hover:text-orange-500"
+              }
             >
               {name}
-            </Link>
+            </NavLink>
           ))}
           <div className="flex gap-2 mt-2">
             <a

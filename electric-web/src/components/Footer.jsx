@@ -1,7 +1,17 @@
 import { Facebook, Linkedin, ChevronUp } from "lucide-react";
+import { NavLink } from "react-router-dom";
 
 const Footer = () => {
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
+
+  const menuLinks = [
+    { name: "Home", path: "/" },
+    { name: "About", path: "/about" },
+    { name: "Services", path: "/services" },
+    { name: "Projects", path: "/projects" },
+    { name: "Careers", path: "/careers" },
+    { name: "Contact", path: "/contact" },
+  ];
 
   return (
     <footer className="bg-[#04182B] text-white px-4 md:px-8 py-10">
@@ -28,18 +38,20 @@ const Footer = () => {
         <div>
           <h4 className="font-semibold text-white mb-2">Menu</h4>
           <ul className="space-y-1 text-sm">
-            {["Home", "About", "Services", "Projects", "Careers", "Contact"].map(
-              (item) => (
-                <li
-                  key={item}
-                  className={`${
-                    item === "Home" ? "text-orange-500" : "text-gray-300"
-                  } hover:text-white`}
+            {menuLinks.map(({ name, path }) => (
+              <li key={name}>
+                <NavLink
+                  to={path}
+                  className={({ isActive }) =>
+                    isActive
+                      ? "text-orange-500"
+                      : "text-gray-300 hover:text-white"
+                  }
                 >
-                  <a href={`#${item.toLowerCase()}`}>{item}</a>
-                </li>
-              )
-            )}
+                  {name}
+                </NavLink>
+              </li>
+            ))}
           </ul>
         </div>
 
@@ -82,10 +94,10 @@ const Footer = () => {
       {/* Bottom Row */}
       <div className="max-w-7xl mx-auto mt-10 flex flex-col md:flex-row justify-between items-center gap-6">
         <div className="flex items-center gap-3">
-          <a href="https://linkedin.com" className="bg-[#1DB7B2] p-2 rounded-full">
+          <a href="https://linkedin.com" className="bg-[#1DB7B2] p-2 rounded-full" target="_blank" rel="noopener noreferrer">
             <Linkedin size={18} className="text-[#04182B]" />
           </a>
-          <a href="https://facebook.com" className="bg-[#1DB7B2] p-2 rounded-full">
+          <a href="https://facebook.com" className="bg-[#1DB7B2] p-2 rounded-full" target="_blank" rel="noopener noreferrer">
             <Facebook size={18} className="text-[#04182B]" />
           </a>
         </div>

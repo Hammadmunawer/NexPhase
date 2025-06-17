@@ -5,9 +5,12 @@ import White from "../components/White";
 import SmallHero from "../components/SmallHero";
 import Faq2 from "../components/Faq2";
 import Companycase2 from "../components/Companycase2";
+import { useNavigate } from "react-router-dom";
+
 
 const Home = () => {
   const [showButton, setShowButton] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -66,51 +69,80 @@ const Home = () => {
           reward.
         </p>
         <div className="mt-10 flex justify-center">
-          <button className="px-6 py-2 text-white border-2 border-[#00ADB1] rounded transition-transform duration-300 hover:text-[#F16624] hover:scale-105 active:scale-200">
-            View Services
-          </button>
+        <button
+  onClick={() => navigate("/services")}
+  className="px-6 py-2 text-white border-2 border-[#00ADB1] rounded transition-transform duration-300 hover:text-[#F16624] hover:scale-105 active:scale-200"
+>
+  View Services
+</button>
+
         </div>
       </div>
 
       {/* White Section */}
-      <div className="bg-white text-black py-16 px-6">
-        <div className="flex justify-center gap-6 mb-8">
-          <div className="w-6 h-6 rounded-full bg-[#00ADB1]" />
-          <div className="w-6 h-6 rounded-full bg-[#00ADB1]" />
-          <div className="w-6 h-6 rounded-full bg-[#00ADB1]" />
+    <div className="bg-white text-black px-6 py-48">
+  {/* Colored Dots */}
+  <div className="flex justify-center gap-6 mb-8">
+    <div className="w-6 h-6 rounded-full bg-[#00ADB1]" />
+    <div className="w-6 h-6 rounded-full bg-[#00ADB1]" />
+    <div className="w-6 h-6 rounded-full bg-[#00ADB1]" />
+  </div>
+
+  {/* Heading */}
+  <h2 className="text-3xl font-semibold text-center mb-2">
+    Trusted by the Kingdom's Prominent <br /> Projects
+  </h2>
+  <div className="w-[296px] h-[2px] bg-[#F16624] mx-auto mb-10" />
+
+  {/* Cards */}
+  <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 mt-20">
+    {[1, 2].map((_, index) => (
+      <div
+        key={index}
+        className="relative h-[50vh] group bg-[#081D30] rounded-xl shadow-lg pt-24 pb-6 px-4 overflow-hidden"
+      >
+        {/* Image Side (Front) */}
+        <div className="absolute inset-0 flex flex-col items-center transition-all duration-500 ease-in-out group-hover:opacity-0 group-hover:scale-90">
+          <img
+            src={`/image/img${index + 1}.${index === 0 ? "png" : "jpg"}`}
+            alt={`Project ${index + 1}`}
+            className="w-[90%] h-[300px] object-cover rounded-md absolute top-[-30px] left-1/2 transform -translate-x-1/2 shadow-xl z-10"
+          />
+          <div className="text-white text-center text-sm mt-[270px] z-20">
+            {index === 0 ? (
+              <>
+                <p className="font-medium mt-4">
+                  King Abdul Aziz Center for World Culture
+                </p>
+                <p>Dahran | Saudi Arabia</p>
+              </>
+            ) : (
+              <>
+                <p className="font-medium mt-4">Riyadh Metro Station</p>
+                <p>Riyadh | Saudi Arabia</p>
+              </>
+            )}
+          </div>
         </div>
-        <h2 className="text-3xl font-semibold text-center mb-2">
-          Trusted by the Kingdom's Prominent <br /> Projects
-        </h2>
-        <div className="w-74 h-[2px] bg-[#F16624] mx-auto mb-10" />
 
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
-          {[1, 2].map((_, index) => (
-            <div
-              className="bg-black rounded-lg shadow-lg perspective p-4"
-              key={index}
-            >
-              <div className="group relative w-full h-[260px] transition-transform duration-700 transform-style-preserve-3d hover:rotate-y-180">
-                <div className="absolute w-full h-full rounded-lg backface-hidden overflow-hidden">
-                  <img
-                    src={`../../public/image/img${index + 1}.${
-                      index === 0 ? "png" : "jpg"
-                    }`}
-                    alt={`Project ${index + 1}`}
-                    className="w-full h-full object-cover rounded-md scale-95 transition-transform duration-300 group-hover:opacity-0"
-                  />
-                </div>
-
-                <div className="absolute w-full h-full flex items-center justify-center bg-[#081D30] rounded-lg rotate-y-180 backface-hidden">
-                  <button className="px-6 py-2 border-2 border-white text-white hover:text-[#F16624] transition-all duration-300">
-                    See Projects
-                  </button>
-                </div>
-              </div>
-            </div>
-          ))}
+        {/* Back Side (On Hover) */}
+        <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-30">
+          <p className="text-white text-sm mb-2 tracking-widest uppercase">
+            Delivered
+          </p>
+         <button
+                onClick={() => navigate("/projects")}
+                className="px-6 py-2 border-2 border-white text-white hover:text-[#F16624] transition-all duration-300"
+              >
+                See Other Projects
+              </button>
         </div>
       </div>
+    ))}
+  </div>
+</div>
+
+
 
       {/* Business Highlights */}
       <div className="bg-[#081D30] text-white py-16 px-6">

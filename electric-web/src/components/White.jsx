@@ -1,6 +1,10 @@
 import React from 'react'
+import { useNavigate } from "react-router-dom";
+
 
 export default function White() {
+    const navigate = useNavigate();
+
   return (
     <div>
          {/* White Section */}
@@ -31,10 +35,13 @@ In practice, the commissioning process comprises the integrated application of a
               <p>
 Commissioning activities, in the broader sense, are applicable to all phases of the project, from the basic and detailed design, procurement, construction and assembly, until the final handover of the unit to the owner, including in certain projects an assisted operational phase as well.
             </p>
-            <div className=" mr-90 flex justify-center">
-          <button className="px-6 py-1 text-white  bg-[#00ADB1] rounded transition-transform duration-300 hover:bg-black hover:scale-105 active:scale-200">
-            View Project
-          </button>
+            <div className=" mt-4 flex ">
+          <button
+      onClick={() => navigate("/projects")}
+      className="px-6 py-1 text-white bg-[#00ADB1] border-2 border-[#00ADB1] rounded transition-transform duration-300 hover:text-[#F16624] hover:scale-105 active:scale-200"
+    >
+      View Project
+    </button>
         </div>
           </div>
         </div>

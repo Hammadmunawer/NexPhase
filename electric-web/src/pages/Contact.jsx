@@ -39,7 +39,7 @@ function Contact() {
       <ContactForm />
 
       {/* Google Map */}
-      <div className="w-screen mt-16">
+      <div className="w-[99vw] mt-16">
         <iframe
           title="Google Map"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3621.9464280131594!2d67.03329347519322!3d24.798430677957387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33e6f62108913%3A0xe528f5f3653fc18a!2sKarachi%2C%20Sindh%2C%20Pakistan!5e0!3m2!1sen!2sus!4v1718488012345!5m2!1sen!2sus"

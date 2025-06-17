@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Hero from '../components/Hero'
 import DeliveredProjects from '../components/DeliveredProjects'
 import Gallery from '../components/Gallery'
+import ContactForm from "../components/ContactForm";
 
 function Projects() {
   const [showButton, setShowButton] = useState(false);
@@ -24,6 +25,20 @@ function Projects() {
       />
       <DeliveredProjects/>
       <Gallery/>
+       <div className="flex justify-center gap-6 mb-8">
+        <div className="w-6 h-6 rounded-full bg-[#00ADB1]" />
+        <div className="w-6 h-6 rounded-full bg-[#00ADB1]" />
+        <div className="w-6 h-6 rounded-full bg-[#00ADB1]" />
+      </div>
+
+      {/* Heading */}
+      <h2 className="text-xl font-semibold text-center mb-2">
+Let's get in touch, please <br /> fill this quick form!
+      </h2>
+
+      {/* Underline */}
+      <div className="w-74 h-[2px] bg-[#F16624] mx-auto mb-10" />
+       <ContactForm/>
        {/* Back to Top Button */}
       {showButton && (
        <button
