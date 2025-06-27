@@ -4,6 +4,9 @@ import Companycase from "../components/Componycase";
 import ContactForm from "../components/ContactForm";
 import Hero from "../components/Hero";
 import Section from "../components/Section";
+import Team from "../components/Team";
+import Testimonials from "../components/Testimonials";
+import LogoSlider from "../components/LogoSlider";
 
 const About = () => {
   const [showButton, setShowButton] = useState(false);
@@ -106,9 +109,12 @@ const About = () => {
       </div>
 
       <Faq />
+      <LogoSlider/>
       <Section/>
-      <Companycase />
-      <ContactForm />
+      <Team/>
+      <Testimonials/>
+      {/* <Companycase /> */}
+      {/* <ContactForm /> */}
 
        {/* Back to Top Button */}
       {showButton && (

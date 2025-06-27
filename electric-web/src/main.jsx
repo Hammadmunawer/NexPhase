@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { createRoot } from 'react-dom/client'; // ✅ Import createRoot from correct package
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import 'swiper/css';
+import 'swiper/css/navigation';
 
 import App from './App.jsx';
 import Home from './pages/Home';

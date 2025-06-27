@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Hero from '../components/Hero'
 import Testing from '../components/Testing'
 import ContactForm from "../components/ContactForm"
+import Testimonials from "../components/Testimonials";
 // import { Construction } from 'lucide-react'
 
 
@@ -80,10 +81,8 @@ function Services() {
         "In practice, the commissioning process comprises the integrated application of a set of engineering techniques and procedures to check, inspect and test every operational requirement of the project, from individual functions, such as instruments and equipment, up to complex amalgamations of modules, subsystems and systems.",
       ]}
     />
-    <div>
-      
-    </div>
-    <ContactForm/>
+   <Testimonials/>
+    {/* <ContactForm/> */}
      {/* Back to Top Button */}
       {showButton && (
        <button

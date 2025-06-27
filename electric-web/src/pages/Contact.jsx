@@ -22,19 +22,7 @@ function Contact() {
         lineColor="#00ADB1"
       />
 
-      <div className="flex justify-center gap-6 mb-8 mt-20">
-        <div className="w-6 h-6 rounded-full bg-[#00ADB1]" />
-        <div className="w-6 h-6 rounded-full bg-[#00ADB1]" />
-        <div className="w-6 h-6 rounded-full bg-[#00ADB1]" />
-      </div>
-
-      {/* Heading */}
-      <h2 className="text-xl font-semibold text-center mb-2">
-        Let's get in touch, please fill <br /> this quick form!
-      </h2>
-
-      {/* Underline */}
-      <div className="w-94 h-[2px] bg-[#F16624] mx-auto mb-10" />
+     
 
       <ContactForm />
 
