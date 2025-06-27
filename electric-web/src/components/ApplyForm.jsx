@@ -1,91 +1,137 @@
-import React, { useState } from "react";
+import React from "react";
 
 const ApplyForm = () => {
-  const [formData, setFormData] = useState({});
-
-  const handleChange = (e) => {
-    const { name, value, files } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: files ? files[0] : value,
-    }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Form submitted", formData);
-  };
-
-  const inputClass = "w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500";
-
   return (
-    <div className="min-h-screen bg-gray-100 py-10 px-4">
-      <form onSubmit={handleSubmit} className="max-w-5xl mx-auto bg-white shadow-lg rounded-lg p-8 space-y-10">
-        <h1 className="text-3xl font-bold text-center  mb-6">Apply Now</h1>
+    <div className="bg-gray-100 min-h-screen p-6">
+      <div className="max-w-5xl mx-auto bg-white p-8 shadow-lg rounded-lg">
+        <h1 className="text-white text-center bg-blue-600 py-4 text-2xl font-bold rounded-md mb-6">
+          STED APPLICATION FORM
+        </h1>
 
-        {/* 1. Personal Information */}
-        <section className="space-y-4">
-          <h2 className="text-2xl font-semibold text-gray-800">1. Personal Information</h2>
-          <input name="fullName" placeholder="Full Name" onChange={handleChange} className={inputClass} required />
-          <input name="email" type="email" placeholder="Email" onChange={handleChange} className={inputClass} required />
-          <input name="phone" type="tel" placeholder="Phone Number" onChange={handleChange} className={inputClass} required />
-          <input name="dob" type="date" onChange={handleChange} className={inputClass} />
-          <input name="address" placeholder="Address" onChange={handleChange} className={inputClass} />
-          <input name="city" placeholder="City" onChange={handleChange} className={inputClass} />
-          <input name="country" placeholder="Country" onChange={handleChange} className={inputClass} />
-        </section>
+        {/* Personal Information Section */}
+        <div className="mb-8">
+          <h2 className="text-lg font-semibold text-gray-700 mb-4">
+            🧑‍💼 Personal Information
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label className="block text-sm font-medium mb-1">
+                Full Name (English) *
+              </label>
+              <input
+                type="text"
+                placeholder="Enter your full name"
+                className="w-full border rounded px-4 py-2"
+              />
+              <p className="text-xs text-gray-500 mt-1">Example: John William Smith</p>
+            </div>
 
-        {/* 2. Educational & Professional Background */}
-        <section className="space-y-4">
-          <h2 className="text-2xl font-semibold text-gray-800">2. Educational & Professional Background</h2>
-          <input name="highestDegree" placeholder="Highest Degree" onChange={handleChange} className={inputClass} />
-          <input name="university" placeholder="University/Institute" onChange={handleChange} className={inputClass} />
-          <input name="graduationYear" type="number" placeholder="Graduation Year" onChange={handleChange} className={inputClass} />
-          <input name="certifications" placeholder="Certifications (comma separated)" onChange={handleChange} className={inputClass} />
-        </section>
+            <div>
+              <label className="block text-sm font-medium mb-1">
+                Full Name (Arabic) *
+              </label>
+              <input
+                type="text"
+                placeholder="أدخل اسمك الكامل باللغة العربية"
+                className="w-full border rounded px-4 py-2"
+              />
+            </div>
 
-        {/* 3. Work Experience */}
-        <section className="space-y-4">
-          <h2 className="text-2xl font-semibold text-gray-800">3. Work Experience</h2>
-          <input name="company" placeholder="Company Name" onChange={handleChange} className={inputClass} />
-          <input name="position" placeholder="Job Title/Position" onChange={handleChange} className={inputClass} />
-          <input name="yearsOfExperience" type="number" placeholder="Years of Experience" onChange={handleChange} className={inputClass} />
-          <textarea name="jobDescription" placeholder="Job Responsibilities" onChange={handleChange} className={`${inputClass} h-24 resize-none`} />
-        </section>
+            <div>
+              <label className="block text-sm font-medium mb-1">Nationality *</label>
+              <select className="w-full border rounded px-4 py-2">
+                <option>Select your nationality</option>
+              </select>
+            </div>
 
-        {/* 4. Skills & Qualifications */}
-        <section className="space-y-4">
-          <h2 className="text-2xl font-semibold text-gray-800">4. Skills & Qualifications</h2>
-          <input name="skills" placeholder="Skills (comma separated)" onChange={handleChange} className={inputClass} />
-          <textarea name="strengths" placeholder="Strengths" onChange={handleChange} className={`${inputClass} h-24 resize-none`} />
-          <textarea name="achievements" placeholder="Achievements" onChange={handleChange} className={`${inputClass} h-24 resize-none`} />
-        </section>
+            <div>
+              <label className="block text-sm font-medium mb-1">
+                Current Country of Residence *
+              </label>
+              <select className="w-full border rounded px-4 py-2">
+                <option>Select your current country</option>
+              </select>
+            </div>
 
-        {/* 5. Employment Terms */}
-        <section className="space-y-4">
-          <h2 className="text-2xl font-semibold text-gray-800">5. Employment Terms</h2>
-          <input name="availability" placeholder="Availability (e.g., Immediate, 2 weeks)" onChange={handleChange} className={inputClass} />
-          <input name="expectedSalary" placeholder="Expected Salary" onChange={handleChange} className={inputClass} />
-          <input name="workLocation" placeholder="Preferred Work Location" onChange={handleChange} className={inputClass} />
-          <select name="relocation" onChange={handleChange} className={inputClass}>
-            <option value="">Willing to Relocate?</option>
-            <option value="yes">Yes</option>
-            <option value="no">No</option>
-          </select>
-        </section>
+            <div>
+              <label className="block text-sm font-medium mb-1">Date of Birth *</label>
+              <input type="date" className="w-full border rounded px-4 py-2" />
+            </div>
 
-        {/* 6. Resume/CV Upload */}
-        <section className="space-y-4">
-          <h2 className="text-2xl font-semibold text-gray-800">6. Resume/CV Upload</h2>
-          <input name="resume" type="file" accept=".pdf,.doc,.docx" onChange={handleChange} className={inputClass} />
-        </section>
+            <div>
+              <label className="block text-sm font-medium mb-1">Gender *</label>
+              <select className="w-full border rounded px-4 py-2">
+                <option>Select gender</option>
+              </select>
+            </div>
 
-        <div className="text-center">
-          <button type="submit" className="bg-[#1DB7B2] text-white font-semibold px-6 py-2 rounded-md  transition duration-200">
-            Submit Application
-          </button>
+            <div>
+              <label className="block text-sm font-medium mb-1">Marital Status *</label>
+              <select className="w-full border rounded px-4 py-2">
+                <option>Select status</option>
+              </select>
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium mb-1">
+                Number of Dependents *
+              </label>
+              <input
+                type="number"
+                placeholder="Enter number"
+                className="w-full border rounded px-4 py-2"
+              />
+              <p className="text-xs text-gray-500 mt-1">Include spouse and children</p>
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium mb-1">Personal Email *</label>
+              <input
+                type="email"
+                placeholder="example@domain.com"
+                className="w-full border rounded px-4 py-2"
+              />
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium mb-1">Contact Number *</label>
+              <input
+                type="tel"
+                placeholder="00966512345678"
+                className="w-full border rounded px-4 py-2"
+              />
+              <p className="text-xs text-gray-500 mt-1">Format: 00 + country code + number</p>
+            </div>
+          </div>
         </div>
-      </form>
+
+        {/* Educational & Professional Background */}
+        <div>
+          <h2 className="text-lg font-semibold text-gray-700 mb-4">
+            🎓 Educational & Professional Background
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label className="block text-sm font-medium mb-1">
+                Academic Qualification *
+              </label>
+              <input
+                type="text"
+                placeholder="Enter your qualification"
+                className="w-full border rounded px-4 py-2"
+              />
+            </div>
+            <div>
+              <label className="block text-sm font-medium mb-1">Career Start Year *</label>
+              <input
+                type="number"
+                placeholder="YYYY"
+                className="w-full border rounded px-4 py-2"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
