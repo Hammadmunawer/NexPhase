@@ -1,7 +1,20 @@
 import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import Hero from "../components/Hero";
 import { Link } from "react-router-dom";
 
+const fadeInVariant = {
+  hidden: { opacity: 0, y: 30 },
+  visible: (custom = 1) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: custom * 0.2,
+      duration: 0.6,
+      ease: "easeOut",
+    },
+  }),
+};
 
 function Careers() {
   const [showButton, setShowButton] = useState(false);
@@ -24,7 +37,14 @@ function Careers() {
         lineColor="#00ADB1"
       />
 
-      <div className="bg-[#081D30] text-white py-16 px-4 text-center">
+      <motion.div
+        className="bg-[#081D30] text-white py-16 px-4 text-center"
+        variants={fadeInVariant}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        custom={1}
+      >
         <div className="flex justify-center gap-6 mb-8">
           <div className="w-6 h-6 rounded-full bg-[#00ADB1]" />
           <div className="w-6 h-6 rounded-full bg-[#00ADB1]" />
@@ -43,10 +63,16 @@ function Careers() {
           building management system, premises performance and stakeholders’
           reward.
         </p>
-      </div>
+      </motion.div>
 
-      {/* --- Resume Section (as seen in image) --- */}
-      <div className="text-center py-16 px-4">
+      <motion.div
+        className="text-center py-16 px-4"
+        variants={fadeInVariant}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        custom={2}
+      >
         <div className="flex justify-center gap-4 mb-6">
           <span className="w-5 h-5 rounded-full bg-[#00ADB1] inline-block" />
           <span className="w-5 h-5 rounded-full bg-[#00ADB1] inline-block" />
@@ -56,16 +82,14 @@ function Careers() {
           Send your resume now!
         </h2>
         <div className="w-40 h-[1px] bg-[#F16624] mx-auto mb-6" />
-       <Link
-           to="/apply-form"
-           className="bg-[#00ADB1] text-white font-bold py-2 px-6 rounded hover:bg-[#F16624] transition-all duration-300 inline-block"
-          >
-           Apply
-       </Link>
+        <Link
+          to="/apply-form"
+          className="bg-[#00ADB1] text-white font-bold py-2 px-6 rounded hover:bg-[#F16624] transition-all duration-300 inline-block"
+        >
+          Apply
+        </Link>
+      </motion.div>
 
-      </div>
-
-      {/* Back to Top Button */}
       {showButton && (
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}

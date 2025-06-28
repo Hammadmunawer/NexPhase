@@ -17,113 +17,111 @@ const ContactForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Form submitted", form);
-    // You can send the form data to a backend/API here
   };
 
   return (
-    <section className="px-4 py-10 md:px-10 bg-white">
-     
+    <section className="px-4 py-12 md:px-10 bg-white">
+      <div className="max-w-4xl mx-auto bg-[#F9F9F9] rounded-2xl shadow-lg p-8 md:p-12 border border-[#E0E0E0]">
+        <h2 className="text-3xl font-bold text-[#04182B] mb-8 text-center">
+          Get in Touch
+        </h2>
 
-      <form
-        onSubmit={handleSubmit}
-        className="max-w-4xl mt-10 space-y-6 text-left"
-      >
-        {/* Name */}
-        <div>
-          <label className="font-semibold text-[#04182B]">
-            Name <span className="text-red-500">*</span>
-          </label>
-          <div className="flex flex-col md:flex-row gap-4 mt-2">
-            <div className="flex-1">
+        <form onSubmit={handleSubmit} className="space-y-6">
+          {/* Name */}
+          <div>
+            <label className="block font-semibold text-[#04182B] mb-2">
+              Name <span className="text-red-500">*</span>
+            </label>
+            <div className="flex flex-col md:flex-row gap-4">
               <input
                 type="text"
                 name="firstName"
                 placeholder="First"
                 required
-                className="w-full bg-[#04182B] text-white px-4 py-2 rounded"
                 value={form.firstName}
                 onChange={handleChange}
+                className="flex-1 px-4 py-3 bg-[#04182B] text-white rounded-md focus:outline-none focus:ring-2 focus:ring-[#1DB7B2] transition"
               />
-            </div>
-            <div className="flex-1">
               <input
                 type="text"
                 name="lastName"
                 placeholder="Last"
-                className="w-full bg-[#04182B] text-white px-4 py-2 rounded"
                 value={form.lastName}
                 onChange={handleChange}
+                className="flex-1 px-4 py-3 bg-[#04182B] text-white rounded-md focus:outline-none focus:ring-2 focus:ring-[#1DB7B2] transition"
               />
             </div>
           </div>
-        </div>
 
-        {/* Email & Phone */}
-        <div>
+          {/* Email & Phone */}
           <div className="flex flex-col md:flex-row gap-4">
             <div className="flex-1">
-              <label className="font-semibold text-[#04182B]">
+              <label className="block font-semibold text-[#04182B] mb-2">
                 Email <span className="text-red-500">*</span>
               </label>
               <input
                 type="email"
                 name="email"
                 required
-                className="w-full bg-[#04182B] text-white px-4 py-2 mt-2 rounded"
                 value={form.email}
                 onChange={handleChange}
+                className="w-full px-4 py-3 bg-[#04182B] text-white rounded-md focus:outline-none focus:ring-2 focus:ring-[#1DB7B2] transition"
               />
             </div>
             <div className="flex-1">
-              <label className="font-semibold text-[#04182B]">Phone</label>
+              <label className="block font-semibold text-[#04182B] mb-2">
+                Phone
+              </label>
               <input
                 type="text"
                 name="phone"
-                className="w-full bg-[#04182B] text-white px-4 py-2 mt-2 rounded"
                 value={form.phone}
                 onChange={handleChange}
+                className="w-full px-4 py-3 bg-[#04182B] text-white rounded-md focus:outline-none focus:ring-2 focus:ring-[#1DB7B2] transition"
               />
             </div>
           </div>
-        </div>
 
-        {/* Subject */}
-        <div>
-          <label className="font-semibold text-[#04182B]">Subject</label>
-          <input
-            type="text"
-            name="subject"
-            className="w-full bg-[#04182B] text-white px-4 py-2 mt-2 rounded"
-            value={form.subject}
-            onChange={handleChange}
-          />
-        </div>
+          {/* Subject */}
+          <div>
+            <label className="block font-semibold text-[#04182B] mb-2">
+              Subject
+            </label>
+            <input
+              type="text"
+              name="subject"
+              value={form.subject}
+              onChange={handleChange}
+              className="w-full px-4 py-3 bg-[#04182B] text-white rounded-md focus:outline-none focus:ring-2 focus:ring-[#1DB7B2] transition"
+            />
+          </div>
 
-        {/* Message */}
-        <div>
-          <label className="font-semibold text-[#04182B]">
-            Message <span className="text-red-500">*</span>
-          </label>
-          <textarea
-            name="message"
-            rows={6}
-            required
-            className="w-full bg-[#04182B] text-white px-4 py-2 mt-2 rounded"
-            value={form.message}
-            onChange={handleChange}
-          ></textarea>
-        </div>
+          {/* Message */}
+          <div>
+            <label className="block font-semibold text-[#04182B] mb-2">
+              Message <span className="text-red-500">*</span>
+            </label>
+            <textarea
+              name="message"
+              rows={6}
+              required
+              value={form.message}
+              onChange={handleChange}
+              className="w-full px-4 py-3 bg-[#04182B] text-white rounded-md focus:outline-none focus:ring-2 focus:ring-[#1DB7B2] transition resize-none"
+            ></textarea>
+          </div>
 
-        {/* Submit Button */}
-        <div>
-          <button
-            type="submit"
-            className="bg-[#1DB7B2] hover:bg-[#149a99] text-[#04182B] font-semibold px-6 py-2 rounded"
-          >
-            Submit
-          </button>
-        </div>
-      </form>
+          {/* Submit */}
+          <div className="text-center">
+            <button
+              type="submit"
+              className="bg-[#1DB7B2] hover:bg-[#149a99] text-[#04182B] font-semibold px-8 py-3 rounded-md transition duration-300 shadow-md hover:shadow-lg"
+            >
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
     </section>
   );
 };

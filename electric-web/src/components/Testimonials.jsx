@@ -1,6 +1,7 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
+import { motion } from "framer-motion";
 import "swiper/css";
 import "swiper/css/pagination";
 
@@ -46,15 +47,28 @@ const Testimonials = () => {
   return (
     <section className="bg-white py-20 px-4">
       <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-4xl font-bold mb-4">
+        <motion.h2
+          className="text-4xl font-bold mb-4"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
           Which is what our popular{" "}
           <span className="text-black font-extrabold">customers are saying</span>
-        </h2>
-        <p className="text-gray-500 max-w-xl mx-auto mb-10">
-          But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born.
-        </p>
+        </motion.h2>
 
-        {/* Slider */}
+        <motion.p
+          className="text-gray-500 max-w-xl mx-auto mb-10"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 0.3, duration: 0.5 }}
+          viewport={{ once: true }}
+        >
+          But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born.
+        </motion.p>
+
+        {/* Swiper Slider */}
         <Swiper
           modules={[Pagination, Autoplay]}
           autoplay={{ delay: 3000, disableOnInteraction: false }}
@@ -68,7 +82,13 @@ const Testimonials = () => {
         >
           {testimonials.map((testimonial, index) => (
             <SwiperSlide key={index}>
-              <div className="bg-[#081D30] shadow-md rounded-xl p-6 text-left border border-gray-700">
+              <motion.div
+                className="bg-[#081D30] shadow-md rounded-xl p-6 text-left border border-gray-700 h-full"
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
                 <div className="flex mb-3">
                   {Array.from({ length: 5 }).map((_, i) => (
                     <span key={i} className="text-yellow-400 text-lg">★</span>
@@ -86,12 +106,12 @@ const Testimonials = () => {
                     <p className="text-gray-400 text-xs">{testimonial.title}</p>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             </SwiperSlide>
           ))}
         </Swiper>
 
-        {/* Pagination Dots Below Cards */}
+        {/* Custom Pagination Dots */}
         <div className="custom-swiper-pagination mt-8 flex justify-center gap-2"></div>
       </div>
     </section>

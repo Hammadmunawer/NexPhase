@@ -1,8 +1,29 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+
+const fadeInVariant = {
+  hidden: { opacity: 0, y: 30 },
+  visible: (i = 1) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: i * 0.2,
+      duration: 0.6,
+      ease: 'easeOut',
+    },
+  }),
+};
 
 const DeliveredProjects = () => {
   return (
-    <div className="bg-[#04182B] text-white py-20 px-4 md:px-20">
+    <motion.div
+      className="bg-[#04182B] text-white py-20 px-4 md:px-20"
+      variants={fadeInVariant}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      custom={0}
+    >
       {/* Dots */}
       <div className="flex justify-center gap-4 mb-6">
         <div className="w-5 h-5 rounded-full bg-[#00ADB1]"></div>
@@ -19,7 +40,14 @@ const DeliveredProjects = () => {
       {/* List Grid */}
       <div className="grid md:grid-cols-2 gap-8 text-sm leading-7 max-w-6xl mx-auto">
         {/* Left Column */}
-        <ul className="list-disc list-inside space-y-1">
+        <motion.ul
+          className="list-disc list-inside space-y-1"
+          variants={fadeInVariant}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          custom={1}
+        >
           <li>King Abdul Aziz Center For World Culture – Dahran</li>
           <li>King Faisal Hospital & Research Center – Riyadh</li>
           <li>Sharma Site 2 – Neom City</li>
@@ -35,10 +63,17 @@ const DeliveredProjects = () => {
           <li>King Abdullah Financial District, Parcel 2.14 – Riyadh</li>
           <li>The Avenue’s Mall</li>
           <li>Via Riyadh</li>
-        </ul>
+        </motion.ul>
 
         {/* Right Column */}
-        <ul className="list-disc list-inside space-y-1">
+        <motion.ul
+          className="list-disc list-inside space-y-1"
+          variants={fadeInVariant}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          custom={2}
+        >
           <li>King Abdullah Financial District, Parcel 3.04 – Riyadh</li>
           <li>King Abdullah Financial District, Parcel 3.05 – Riyadh</li>
           <li>King Abdullah Financial District, Parcel 5.07 – Riyadh</li>
@@ -56,9 +91,9 @@ const DeliveredProjects = () => {
           <li>
             <em>Many Other Confidential, Complex and MEGA Projects.</em>
           </li>
-        </ul>
+        </motion.ul>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
