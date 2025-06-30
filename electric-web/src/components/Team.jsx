@@ -51,7 +51,7 @@ const teamMembers = [
 
 const Team = () => {
   return (
-    <motion.section
+    <section
       className="bg-[#081D30] py-12 px-6"
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
@@ -75,7 +75,7 @@ const Team = () => {
       >
         {teamMembers.map((member, index) => (
           <SwiperSlide key={index}>
-            <motion.div
+            <div
               className="bg-[#1c2431] rounded-xl p-6 text-center flex flex-col items-center shadow-md"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -100,14 +100,14 @@ const Team = () => {
                   <Linkedin size={20} />
                 </button>
               </div>
-            </motion.div>
+            </div>
           </SwiperSlide>
         ))}
       </Swiper>
 
       {/* Dots below cards */}
       <div className="team-pagination mt-8 flex justify-center gap-2"></div>
-    </motion.section>
+    </section>
   );
 };
 

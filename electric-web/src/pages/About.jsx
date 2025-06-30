@@ -32,7 +32,7 @@ const About = () => {
       />
 
       {/* Exclusive Message Section */}
-      <motion.div
+      <div
         className="bg-[#081D30] text-white py-16 px-4 text-center"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -49,10 +49,10 @@ const About = () => {
         <p className="max-w-3xl mx-auto text-lg leading-8">
           At our company, we strive to bring the best of creativity, innovation, and dedication to each and every client. Our commitment to excellence is unmatched, and we believe in delivering more than what’s expected. This is not just business, it’s a promise to always stay ahead.
         </p>
-      </motion.div>
+      </div>
 
       {/* White Section */}
-      <motion.div
+      <div
         className="bg-white text-black py-16 px-6"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -67,7 +67,7 @@ const About = () => {
         <h2 className="text-3xl font-semibold text-center mb-2">Business Overview</h2>
         <div className="w-74 h-[2px] bg-[#F16624] mx-auto mb-10" />
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
-          <motion.div
+          <div
             className="w-full md:w-1/2"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -79,8 +79,8 @@ const About = () => {
               alt="About"
               className="w-full h-auto rounded-lg shadow-lg"
             />
-          </motion.div>
-          <motion.div
+          </div>
+          <div
             className="w-full md:w-1/2 text-lg leading-8"
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -90,12 +90,12 @@ const About = () => {
             <p>
               Our story is rooted in a deep passion for excellence and vision. With every step, we strive to redefine possibilities and push boundaries. The journey has not just been about achieving milestones but about creating a legacy of innovation, integrity, and impact.
             </p>
-          </motion.div>
+          </div>
         </div>
-      </motion.div>
+      </div>
 
       {/* Business Highlights */}
-      <motion.div
+      <div
         className="bg-[#081D30] text-white py-16 px-6"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -110,7 +110,7 @@ const About = () => {
         <h2 className="text-3xl font-semibold text-center mb-2">Business Highlights</h2>
         <div className="w-74 h-[2px] bg-[#F16624] mx-auto mb-10" />
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-start gap-10">
-          <motion.div
+          <div
             className="w-full md:w-1/2"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -122,8 +122,8 @@ const About = () => {
               alt="Vision"
               className="w-full h-auto rounded-lg shadow-lg"
             />
-          </motion.div>
-          <motion.div
+          </div>
+          <div
             className="w-full md:w-1/2 space-y-6 text-lg leading-7"
             initial="hidden"
             whileInView="visible"
@@ -145,7 +145,7 @@ const About = () => {
               "We believe in long-term partnerships, not transactions.",
               "Our growth is aligned with your success.",
             ].map((text, index) => (
-              <motion.div
+              <div
                 key={index}
                 className="flex items-start gap-3"
                 initial={{ opacity: 0, y: 20 }}
@@ -154,11 +154,11 @@ const About = () => {
               >
                 <div className="w-3 h-3 mt-2 rounded-full bg-[#00ADB1]" />
                 <p>{text}</p>
-              </motion.div>
+              </div>
             ))}
-          </motion.div>
+          </div>
         </div>
-      </motion.div>
+      </div>
 
       <Faq />
       <LogoSlider />

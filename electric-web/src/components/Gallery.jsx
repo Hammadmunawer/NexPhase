@@ -22,7 +22,7 @@ const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState(null);
 
   return (
-    <motion.div
+    <div
       className="py-16 px-4 text-center"
       variants={fadeIn}
       initial="hidden"
@@ -43,7 +43,7 @@ const Gallery = () => {
       {/* Image Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 max-w-6xl mx-auto">
         {images.map((img, index) => (
-          <motion.img
+          <img
             key={index}
             src={img}
             alt={`Gallery ${index + 1}`}
@@ -58,7 +58,7 @@ const Gallery = () => {
       {/* Modal */}
       <AnimatePresence>
         {selectedImage && (
-          <motion.div
+          <div
             className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -73,7 +73,7 @@ const Gallery = () => {
             </button>
 
             {/* Image with zoom animation */}
-            <motion.img
+            <img
               src={selectedImage}
               alt="Selected"
               className="max-w-[90%] max-h-[80%] rounded-lg shadow-lg"
@@ -82,10 +82,10 @@ const Gallery = () => {
               exit={{ scale: 0.5, opacity: 0 }}
               transition={{ duration: 0.4 }}
             />
-          </motion.div>
+          </div>
         )}
       </AnimatePresence>
-    </motion.div>
+    </div>
   );
 };
 

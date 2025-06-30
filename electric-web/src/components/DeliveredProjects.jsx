@@ -16,7 +16,7 @@ const fadeInVariant = {
 
 const DeliveredProjects = () => {
   return (
-    <motion.div
+    <div
       className="bg-[#04182B] text-white py-20 px-4 md:px-20"
       variants={fadeInVariant}
       initial="hidden"
@@ -40,7 +40,7 @@ const DeliveredProjects = () => {
       {/* List Grid */}
       <div className="grid md:grid-cols-2 gap-8 text-sm leading-7 max-w-6xl mx-auto">
         {/* Left Column */}
-        <motion.ul
+        <ul
           className="list-disc list-inside space-y-1"
           variants={fadeInVariant}
           initial="hidden"
@@ -63,10 +63,10 @@ const DeliveredProjects = () => {
           <li>King Abdullah Financial District, Parcel 2.14 – Riyadh</li>
           <li>The Avenue’s Mall</li>
           <li>Via Riyadh</li>
-        </motion.ul>
+        </ul>
 
         {/* Right Column */}
-        <motion.ul
+        <ul
           className="list-disc list-inside space-y-1"
           variants={fadeInVariant}
           initial="hidden"
@@ -91,9 +91,9 @@ const DeliveredProjects = () => {
           <li>
             <em>Many Other Confidential, Complex and MEGA Projects.</em>
           </li>
-        </motion.ul>
+        </ul>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

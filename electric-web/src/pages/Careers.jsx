@@ -37,7 +37,7 @@ function Careers() {
         lineColor="#00ADB1"
       />
 
-      <motion.div
+      <div
         className="bg-[#081D30] text-white py-16 px-4 text-center"
         variants={fadeInVariant}
         initial="hidden"
@@ -53,7 +53,7 @@ function Careers() {
         <h2 className="text-3xl font-semibold mb-2">
           Leading the Curve in <br /> Engineering Excellence
         </h2>
-        <div className="w-94 h-[2px] bg-[#F16624] mx-auto mb-8" />
+        <div className="w-74 h-[2px] bg-[#F16624] mx-auto mb-8" />
         <p className="max-w-3xl mx-auto text-lg leading-8 break-all">
           In a global era of escalating environment, social and governance
           policies; and in the decade of action on SDGs and climate change, as
@@ -63,9 +63,9 @@ function Careers() {
           building management system, premises performance and stakeholders’
           reward.
         </p>
-      </motion.div>
+      </div>
 
-      <motion.div
+      <div
         className="text-center py-16 px-4"
         variants={fadeInVariant}
         initial="hidden"
@@ -88,7 +88,7 @@ function Careers() {
         >
           Apply
         </Link>
-      </motion.div>
+      </div>
 
       {showButton && (
         <button

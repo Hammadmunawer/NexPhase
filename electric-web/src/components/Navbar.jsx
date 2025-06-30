@@ -18,14 +18,13 @@ const Navbar = () => {
   return (
     <header className="bg-[#04182B] text-white w-full">
       <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-        {/* Left - Logo and Tagline */}
+        {/* Left - Logo Image and Tagline */}
         <div className="flex items-center gap-6">
-          <div className="text-4xl font-bold flex items-center">
-            <span className="text-[#1DB7B2]">S</span>
-            <span className="text-[#1DB7B2]">T</span>
-            <span className="text-orange-500">E</span>
-            <span className="text-[#1DB7B2]">D</span>
-          </div>
+          <img
+            src="../../public/image/logo.png"
+            alt="Logo"
+            className="h-10 w-auto"
+          />
           <div className="hidden md:flex flex-col leading-5 text-sm">
             <span>MEP Engineering & Specialized</span>
             <span>Services</span>

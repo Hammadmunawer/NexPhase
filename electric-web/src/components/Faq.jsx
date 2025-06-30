@@ -45,7 +45,7 @@ const Faq = () => {
   };
 
   return (
-    <motion.div
+    <div
       className="bg-white text-black py-16 px-6"
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
@@ -60,18 +60,18 @@ const Faq = () => {
       </div>
 
       {/* Heading */}
-      <motion.h2
+      <h2
         className="text-xl font-semibold text-center mb-2"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ delay: 0.2 }}
       >
         Standards and principles nurture success
-      </motion.h2>
+      </h2>
 
       {/* Underline */}
-      <motion.div
-        className="w-94 h-[2px] bg-[#F16624] mx-auto mb-10"
+      <div
+        className="w-74 h-[2px] bg-[#F16624] mx-auto mb-10"
         initial={{ scaleX: 0 }}
         whileInView={{ scaleX: 1 }}
         transition={{ duration: 0.5 }}
@@ -81,7 +81,7 @@ const Faq = () => {
       {/* Content Grid */}
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-10">
         {/* Left Image */}
-        <motion.div
+        <div
           className="w-full md:w-1/2"
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -93,10 +93,10 @@ const Faq = () => {
             alt="FAQ"
             className="w-full h-auto rounded-lg shadow-lg"
           />
-        </motion.div>
+        </div>
 
         {/* Right FAQ List */}
-        <motion.div
+        <div
           className="w-full md:w-1/2 space-y-2"
           initial="hidden"
           animate="visible"
@@ -119,7 +119,7 @@ const Faq = () => {
 
               <AnimatePresence initial={false}>
                 {openIndex === index && (
-                  <motion.div
+                  <div
                     key="content"
                     initial={{ opacity: 0, height: 0 }}
                     animate={{ opacity: 1, height: "auto" }}
@@ -128,14 +128,14 @@ const Faq = () => {
                     className="px-4 pb-2 overflow-hidden"
                   >
                     <p className="text-gray-700">{faq.answer}</p>
-                  </motion.div>
+                  </div>
                 )}
               </AnimatePresence>
             </div>
           ))}
-        </motion.div>
+        </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

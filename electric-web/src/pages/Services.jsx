@@ -76,7 +76,7 @@ function Services() {
       />
 
       {serviceData.map((item, index) => (
-        <motion.div
+        <div
           key={item.heading}
           variants={fadeInVariant}
           initial="hidden"
@@ -85,10 +85,10 @@ function Services() {
           custom={index}
         >
           <Testing heading={item.heading} imageSrc={item.imageSrc} paragraphs={paragraphs} />
-        </motion.div>
+        </div>
       ))}
 
-      <motion.div
+      <div
         variants={fadeInVariant}
         initial="hidden"
         whileInView="visible"
@@ -96,7 +96,7 @@ function Services() {
         custom={serviceData.length}
       >
         <Testimonials />
-      </motion.div>
+      </div>
 
       {/* Back to Top Button */}
       {showButton && (

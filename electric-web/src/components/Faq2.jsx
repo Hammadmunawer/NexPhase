@@ -21,7 +21,7 @@ const Faq2 = () => {
   };
 
   return (
-    <motion.div
+    <div
       className="bg-[#081D30] text-white py-16 px-6"
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
@@ -36,18 +36,18 @@ const Faq2 = () => {
       </div>
 
       {/* Heading */}
-      <motion.h2
+      <h2
         className="text-xl font-semibold text-center mb-2"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ delay: 0.2 }}
       >
         Standards and principles nurture success
-      </motion.h2>
+      </h2>
 
       {/* Underline */}
-      <motion.div
-        className="w-94 h-[2px] bg-[#F16624] mx-auto mb-10"
+      <div
+        className="w-74 h-[2px] bg-[#F16624] mx-auto mb-10"
         initial={{ scaleX: 0 }}
         whileInView={{ scaleX: 1 }}
         transition={{ duration: 0.5 }}
@@ -57,7 +57,7 @@ const Faq2 = () => {
       {/* Grid */}
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-10">
         {/* Image */}
-        <motion.div
+        <div
           className="w-full md:w-1/2"
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -69,10 +69,10 @@ const Faq2 = () => {
             alt="FAQ"
             className="w-full h-auto rounded-lg shadow-lg"
           />
-        </motion.div>
+        </div>
 
         {/* FAQ Items */}
-        <motion.div
+        <div
           className="w-full md:w-1/2 space-y-2"
           initial="hidden"
           animate="visible"
@@ -95,7 +95,7 @@ const Faq2 = () => {
 
               <AnimatePresence initial={false}>
                 {openIndex === index && (
-                  <motion.div
+                  <div
                     key="faq"
                     initial={{ opacity: 0, height: 0 }}
                     animate={{ opacity: 1, height: "auto" }}
@@ -106,14 +106,14 @@ const Faq2 = () => {
                     <p className="text-gray-300 text-sm">
                       This is a placeholder answer. You can update it later with real content.
                     </p>
-                  </motion.div>
+                  </div>
                 )}
               </AnimatePresence>
             </div>
           ))}
-        </motion.div>
+        </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export default function Section() {
   return (
-    <motion.div
+    <div
       className="bg-[#081D30] text-white py-16 px-6"
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
@@ -28,7 +28,7 @@ export default function Section() {
       {/* Content Grid */}
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-10">
         {/* Left Image */}
-        <motion.div
+        <div
           className="w-full md:w-1/2"
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -40,10 +40,10 @@ export default function Section() {
             alt="Innovation"
             className="w-full h-auto rounded-lg shadow-lg"
           />
-        </motion.div>
+        </div>
 
         {/* Right Paragraph */}
-        <motion.div
+        <div
           className="w-full md:w-1/2 text-lg leading-relaxed"
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -60,8 +60,8 @@ export default function Section() {
             visionary ideas to life through agile processes and continuous
             collaboration. Join us in redefining what's possible.
           </p>
-        </motion.div>
+        </div>
       </div>
-    </motion.div>
+    </div>
   );
 }

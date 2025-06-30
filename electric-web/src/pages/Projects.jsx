@@ -40,7 +40,7 @@ function Projects() {
         lineColor="#00ADB1"
       />
 
-      <motion.div
+      <div
         variants={fadeInVariant}
         initial="hidden"
         whileInView="visible"
@@ -48,9 +48,9 @@ function Projects() {
         custom={0}
       >
         <DeliveredProjects />
-      </motion.div>
+      </div>
 
-      <motion.div
+      <div
         variants={fadeInVariant}
         initial="hidden"
         whileInView="visible"
@@ -58,9 +58,9 @@ function Projects() {
         custom={1}
       >
         <Gallery />
-      </motion.div>
+      </div>
 
-      <motion.div
+      <div
         variants={fadeInVariant}
         initial="hidden"
         whileInView="visible"
@@ -68,7 +68,7 @@ function Projects() {
         custom={2}
       >
         <Testimonials />
-      </motion.div>
+      </div>
 
       {/* Back to Top Button */}
       {showButton && (

@@ -47,7 +47,7 @@ const Testimonials = () => {
   return (
     <section className="bg-white py-20 px-4">
       <div className="max-w-6xl mx-auto text-center">
-        <motion.h2
+        <h2
           className="text-4xl font-bold mb-4"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -56,9 +56,9 @@ const Testimonials = () => {
         >
           Which is what our popular{" "}
           <span className="text-black font-extrabold">customers are saying</span>
-        </motion.h2>
+        </h2>
 
-        <motion.p
+        <p
           className="text-gray-500 max-w-xl mx-auto mb-10"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -66,7 +66,7 @@ const Testimonials = () => {
           viewport={{ once: true }}
         >
           But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born.
-        </motion.p>
+        </p>
 
         {/* Swiper Slider */}
         <Swiper
@@ -82,7 +82,7 @@ const Testimonials = () => {
         >
           {testimonials.map((testimonial, index) => (
             <SwiperSlide key={index}>
-              <motion.div
+              <div
                 className="bg-[#081D30] shadow-md rounded-xl p-6 text-left border border-gray-700 h-full"
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -106,7 +106,7 @@ const Testimonials = () => {
                     <p className="text-gray-400 text-xs">{testimonial.title}</p>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             </SwiperSlide>
           ))}
         </Swiper>

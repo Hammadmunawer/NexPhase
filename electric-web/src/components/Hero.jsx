@@ -18,7 +18,7 @@ const Hero = ({
 
   return (
     <div
-      className="relative h-[100vh] bg-cover bg-center flex items-center"
+      className="relative min-h-screen bg-cover bg-center flex items-center"
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       {/* Overlay */}
@@ -28,20 +28,24 @@ const Hero = ({
       ></div>
 
       {/* Content */}
-      <div className="relative z-10 flex items-center justify-center w-full px-10">
-        <div className="text-white max-w-md mr-8">
-          <p className="mt-4 text-lg">{headingText}</p>
+      <div className="relative z-10 flex flex-col md:flex-row items-center justify-center w-full px-6 md:px-10 gap-8 text-center md:text-left">
+        {/* Lines */}
+        <div className="flex flex-col gap-4 relative items-center md:items-start order-1 md:order-2">
+          <div
+            className="w-36 sm:w-44 md:w-52 h-[2px] rotate-[-30deg] origin-left absolute top-0 left-0"
+            style={{ backgroundColor: lineColor }}
+          />
+          <div
+            className="w-44 sm:w-56 md:w-64 h-[2px] rotate-[-30deg] origin-left mt-4"
+            style={{ backgroundColor: lineColor }}
+          />
         </div>
 
-        <div className="flex flex-col gap-0 relative">
-          <div
-            className="w-52 h-[2px] rotate-[-30deg] origin-left absolute top-0 mt-15 left-0"
-            style={{ backgroundColor: lineColor }}
-          />
-          <div
-            className="w-64 h-[2px] rotate-[-30deg] origin-left mt-20"
-            style={{ backgroundColor: lineColor }}
-          />
+        {/* Text */}
+        <div className="text-white max-w-md order-2 md:order-1">
+          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-medium leading-snug">
+            {headingText}
+          </p>
         </div>
       </div>
     </div>

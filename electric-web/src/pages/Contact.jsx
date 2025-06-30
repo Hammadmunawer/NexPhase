@@ -38,7 +38,7 @@ function Contact() {
       />
 
       {/* Animated Contact Form */}
-      <motion.div
+      <div
         variants={fadeInVariant}
         initial="hidden"
         whileInView="visible"
@@ -46,10 +46,10 @@ function Contact() {
         custom={1}
       >
         <ContactForm />
-      </motion.div>
+      </div>
 
       {/* Animated Google Map */}
-      <motion.div
+      <div
         className="w-[99vw] mt-16"
         variants={fadeInVariant}
         initial="hidden"
@@ -67,7 +67,7 @@ function Contact() {
           referrerPolicy="no-referrer-when-downgrade"
           className="border-0"
         ></iframe>
-      </motion.div>
+      </div>
 
       {/* Back to Top Button */}
       {showButton && (
