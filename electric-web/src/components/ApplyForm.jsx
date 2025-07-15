@@ -158,19 +158,31 @@ const ApplyForm = () => {
             🎓 Educational & Professional Background
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>
-              <label className="block text-sm font-medium mb-1">
-                Academic Qualification *
-              </label>
-              <input
-                type="text"
-                placeholder="Enter your qualification"
-                className="w-full border rounded px-4 py-2 focus:border-blue-500 focus:shadow-md focus:outline-none focus:ring-0 transition duration-200"
-              />
-              <p className="text-xs text-gray-500 mt-1">
-                Enter your highest degree with specialization
-              </p>
-            </div>
+           <div>
+  <label className="block text-sm font-medium mb-1">
+    Academic Qualification *
+  </label>
+  <select
+    className="w-full border rounded px-4 py-2 focus:border-blue-500 focus:shadow-md focus:outline-none focus:ring-0 transition duration-200"
+    defaultValue=""
+  >
+    <option className="bg-black text-white" value="" disabled>Select your qualification</option>
+    <option className="bg-black text-white">Bachelor of Civil Engineering</option>
+    <option className="bg-black text-white">Bachelor of Machanical Engineering</option>
+    <option className="bg-black text-white">Bachelor of Electrical Engineering</option>
+    <option className="bg-black text-white">Bachelor of Architecture</option>
+    <option className="bg-black text-white">Master of Construction Management</option>
+    <option className="bg-black text-white">Master of Environmental Engineering</option>
+    <option className="bg-black text-white">Master of Structural Engineering</option>
+    <option className="bg-black text-white">Bachelor of Building Technology</option>
+    <option className="bg-black text-white">Bachelor of Serveying Geomatics</option>
+    <option className="bg-black text-white">Bachelor of Engineering Technology</option>
+  </select>
+  <p className="text-xs text-gray-500 mt-1">
+    Enter your highest degree with specialization
+  </p>
+</div>
+
             <div>
               <label className="block text-sm font-medium mb-1">
                 Career Start Year *
