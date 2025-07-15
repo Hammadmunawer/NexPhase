@@ -239,11 +239,11 @@ const ApplyForm = () => {
     </label>
     <input
       type="text"
-      placeholder="Enter the position you're applying for at STED"
+      placeholder="Enter the position you're applying for at NEXPHASE"
       className="w-full border rounded px-4 py-2 focus:border-blue-500 focus:shadow-md focus:outline-none focus:ring-0 transition duration-200"
     />
     <p className="text-xs text-gray-500 mt-1">
-      Specify your target role or position at STED
+      Specify your target role or position at NEXPHASE
     </p>
   </div>
        </div>
@@ -397,8 +397,8 @@ const ApplyForm = () => {
       <label className="block text-sm font-medium mb-2">Testing & Commissioning Role *</label>
       <select className="w-full border rounded px-4 py-2 focus:border-blue-500 focus:shadow-md focus:outline-none focus:ring-0 transition duration-200">
         <option>Select your preference</option>
-        <option>Interested</option>
-        <option>Not Interested</option>
+        <option>IntereNEXPHASE</option>
+        <option>Not IntereNEXPHASE</option>
       </select>
       <p className="text-xs text-gray-500 mt-1">
         Your interest in Testing & Commissioning work
@@ -409,10 +409,10 @@ const ApplyForm = () => {
       <label className="block text-sm font-medium mb-2">QA/QC Role *</label>
       <select className="w-full border rounded px-4 py-2 focus:border-blue-500 focus:shadow-md focus:outline-none focus:ring-0 transition duration-200">
         <option>Select your preference</option>
-        <option>Very Interested</option>
-        <option>Interested</option>
+        <option>Very IntereNEXPHASE</option>
+        <option>IntereNEXPHASE</option>
         <option>Neutral</option>
-        <option>Not Interested</option>
+        <option>Not IntereNEXPHASE</option>
       </select>
       <p className="text-xs text-gray-500 mt-1">
         Your interest in Quality Assurance/Control work
@@ -518,7 +518,7 @@ const ApplyForm = () => {
       className="w-full border rounded px-4 py-2 focus:border-blue-500 focus:shadow-md focus:outline-none focus:ring-0 transition duration-200"
     />
     <p className="text-xs text-gray-500 mt-1">
-      Highlight your key strengths and motivation for joining STED
+      Highlight your key strengths and motivation for joining NEXPHASE
     </p>
   </div>
         </div>

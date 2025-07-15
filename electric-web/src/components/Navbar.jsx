@@ -21,9 +21,9 @@ const Navbar = () => {
         {/* Left - Logo Image and Tagline */}
         <div className="flex items-center gap-6">
           <img
-            src="../../public/image/logo.png"
+            src="../../public/image/logo (2).png"
             alt="Logo"
-            className="h-10 w-auto"
+            className="h-18 w-16"
           />
           <div className="hidden md:flex flex-col leading-5 text-sm">
             <span>MEP Engineering & Specialized</span>

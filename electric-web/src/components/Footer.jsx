@@ -18,12 +18,17 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto grid md:grid-cols-5 gap-8">
         {/* Logo & Partners */}
         <div className="md:col-span-2 space-y-6">
-          <div className="text-4xl font-bold flex items-center">
-            <span className="text-[#1DB7B2]">S</span>
-            <span className="text-[#1DB7B2]">T</span>
-            <span className="text-orange-500">E</span>
-            <span className="text-[#1DB7B2]">D</span>
+           <div className="flex items-center gap-6">
+          <img
+            src="../../public/image/logo (2).png"
+            alt="Logo"
+            className="h-18 w-16"
+          />
+          <div className="hidden md:flex flex-col leading-5 text-sm">
+            <span>MEP Engineering & Specialized</span>
+            <span>Services</span>
           </div>
+        </div>
           <div>
             <h4 className="font-semibold text-white mb-2">Growth Partners</h4>
             <p className="text-sm text-gray-300">
@@ -59,7 +64,7 @@ const Footer = () => {
         <div>
           <h4 className="font-semibold text-white mb-2">Saudi Arabia</h4>
           <p className="text-sm text-gray-300">
-            STED SAUDI Co. L.T.D.
+            NEXPHASE SAUDI Co. L.T.D.
             <br />
             Riyadh, KSA, CR: 1010618041
             <br />
@@ -69,7 +74,7 @@ const Footer = () => {
             <br />
             T: +966112543739
             <br />
-            info@stedltd.com
+            info@nexphaseltd.com
           </p>
         </div>
 
@@ -77,7 +82,7 @@ const Footer = () => {
         <div>
           <h4 className="font-semibold text-white mb-2">Lebanon</h4>
           <p className="text-sm text-gray-300">
-            STED Co. L.T.D.
+            NEXPHASE Co. L.T.D.
             <br />
             Baabda, Lebanon, CR: 2040339
             <br />
@@ -86,7 +91,7 @@ const Footer = () => {
             <br />
             T: +9613516476
             <br />
-            info@stedltd.com
+            info@nexphaseltd.com
           </p>
         </div>
       </div>
@@ -103,7 +108,7 @@ const Footer = () => {
         </div>
 
         <div className="text-sm text-gray-300 text-center md:text-left">
-          <p>Copyrights STED LTD.</p>
+          <p>Copyrights NEXPHASE LTD.</p>
           <p>2022</p>
         </div>
 
