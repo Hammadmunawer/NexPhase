@@ -183,31 +183,108 @@ const ApplyForm = () => {
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-            <div>
-              <label className="block text-sm font-medium mb-1">Current/Previous Basic Salary</label>
-              <div className="flex rounded border px-2 py-2 items-center gap-2 focus-within:border-blue-500 focus-within:shadow-md transition duration-200">
-                <span className="text-gray-600">SAR</span>
-                <input
-                  type="number"
-                  placeholder="Enter amount"
-                  className="w-full outline-none"
-                />
-              </div>
-              <p className="text-xs text-gray-500 mt-1">
-                Monthly basic salary in Saudi Riyals
-              </p>
-            </div>
+  {/* Technical Specialization */}
+  <div>
+    <label className="block text-sm font-medium mb-1">Technical Specialization *</label>
+    <select className="w-full border rounded px-4 py-2 focus:border-blue-500 focus:shadow-md focus:outline-none focus:ring-0 transition duration-200">
+      <option>Select your primary field</option>
+      <option>Civil Engineering</option>
+      <option>Mechanical Engineering</option>
+      <option>Electrical Engineering</option>
+      <option>Architecture</option>
+      <option>Environmental Engineering</option>
+      <option>Low Current system</option>
+      <option>Sustainability</option>
+    </select>
+    <p className="text-xs text-gray-500 mt-1">Your main area of technical expertise</p>
+  </div>
+
+  {/* Current Position */}
+  <div>
+    <label className="block text-sm font-medium mb-1">Current Position *</label>
+    <input
+      type="text"
+      placeholder="Type your current job title"
+      className="w-full border rounded px-4 py-2 focus:border-blue-500 focus:shadow-md focus:outline-none focus:ring-0 transition duration-200"
+    />
+    <p className="text-xs text-gray-500 mt-1">Your current job title or role</p>
+  </div>
+</div>
+
+
+         <div>
+  <label className="block text-sm font-medium mb-1">
+Position Applied For *  </label>
+  <input
+    type="text"
+    placeholder="Enter the position your applying for at STED"
+    className="w-full border rounded px-4 py-2 focus:border-blue-500 focus:shadow-md focus:outline-none focus:ring-0 transition duration-200"
+  />
+  <p className="text-xs text-gray-500 mt-1">
+Specify your target role or position at STED  </p>
+          </div>
+        </div>
+        
+         {/* Work Experience*/}
+        <div className="mb-2 bg-white px-3 py-2 rounded-md hover:shadow-lg">
+          <h2 className="text-lg w-full bg-gray-100 px-4 py-3 rounded-t-md font-semibold text-gray-700 mb-4 -mx-3">
+             Work Experience
+          </h2>
+          <div>
+  <label className="block text-sm font-medium mb-1">
+    Most Recent Position
+  </label>
+  <input
+    type="text"
+    placeholder="Enter your current/job position"
+    className="w-full border rounded px-4 py-2 focus:border-blue-500 focus:shadow-md focus:outline-none focus:ring-0 transition duration-200"
+  />
+  <p className="text-xs text-gray-500 mt-1">
+    Your current or most recent job title before applying
+  </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+           <div>
+  <label className="block text-sm font-medium mb-1">
+    Current/Previous Basic Salary
+  </label>
+
+  <div className="flex w-full mt-1">
+    {/* SAR label with matching border */}
+    <span className="border border-r-0 rounded-l-md px-3 py-2 text-gray-600 bg-gray-100">
+      SAR
+    </span>
+
+    {/* Input field seamlessly joined */}
+    <input
+      type="number"
+      placeholder="Enter amount"
+      className="w-full border border-l-1 rounded-r-md px-4 py-2 focus:border-blue-500 focus:shadow-md focus:outline-none focus:ring-0 transition duration-200"
+    />
+  </div>
+
+  <p className="text-xs text-gray-500 mt-1">
+    Monthly basic salary in Saudi Riyals
+  </p>
+</div>
+
 
             <div>
               <label className="block text-sm font-medium mb-1">Current/Previous Benefits</label>
-              <div className="flex rounded border px-2 py-2 items-center gap-2 focus-within:border-blue-500 focus-within:shadow-md transition duration-200">
-                <span className="text-gray-600">SAR</span>
-                <input
-                  type="number"
-                  placeholder="Enter amount"
-                  className="w-full outline-none"
-                />
-              </div>
+              <div className="flex w-full mt-1">
+    {/* SAR label with matching border */}
+    <span className="border border-r-0 rounded-l-md px-3 py-2 text-gray-600 bg-gray-100">
+      SAR
+    </span>
+
+    {/* Input field seamlessly joined */}
+    <input
+      type="number"
+      placeholder="Enter amount"
+      className="w-full border border-l-1 rounded-r-md px-4 py-2 focus:border-blue-500 focus:shadow-md focus:outline-none focus:ring-0 transition duration-200"
+    />
+  </div>
               <p className="text-xs text-gray-500 mt-1">
                 Monthly allowances and benefits in Saudi Riyals
               </p>
@@ -217,47 +294,56 @@ const ApplyForm = () => {
           {/* Years of Experience */}
           <h3 className="text-md font-semibold mt-8 mb-2">Years of Experience</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div>
-              <label className="block text-sm font-medium mb-1">Testing & Commissioning *</label>
-              <div className="flex border rounded px-2 py-2 items-center justify-between focus-within:border-blue-500 focus-within:shadow-md transition duration-200">
-                <input
-                  type="number"
-                  placeholder="Years"
-                  className="w-full outline-none"
-                />
-                <span className="ml-2 text-sm">Years</span>
-              </div>
-              <p className="text-xs text-gray-500 mt-1">Experience in testing & commissioning</p>
-            </div>
+  {/* Testing & Commissioning */}
+  <div>
+    <label className="block text-sm font-medium mb-1">Testing & Commissioning *</label>
+    <div className="flex w-full">
+      <input
+        type="number"
+        placeholder="Enter years"
+        className="w-full border border-r-0 rounded-l-md px-4 py-2 focus:border-blue-500 focus:shadow-md focus:outline-none focus:ring-0 transition duration-200"
+      />
+      <span className="border border-l-1 rounded-r-md px-3 py-2 text-gray-600 bg-gray-100">
+        Years
+      </span>
+    </div>
+    <p className="text-xs text-gray-500 mt-1">Experience in testing & commissioning</p>
+  </div>
 
-            <div>
-              <label className="block text-sm font-medium mb-1">Construction Field *</label>
-              <div className="flex border rounded px-2 py-2 items-center justify-between focus-within:border-blue-500 focus-within:shadow-md transition duration-200">
-                <input
-                  type="number"
-                  placeholder="Years"
-                  className="w-full outline-none"
-                />
-                <span className="ml-2 text-sm">Years</span>
-              </div>
-              <p className="text-xs text-gray-500 mt-1">Total construction industry experience</p>
-            </div>
+  {/* Construction Field */}
+  <div>
+    <label className="block text-sm font-medium mb-1">Construction Field *</label>
+    <div className="flex w-full">
+      <input
+        type="number"
+        placeholder="Enter years"
+        className="w-full border border-r-0 rounded-l-md px-4 py-2 focus:border-blue-500 focus:shadow-md focus:outline-none focus:ring-0 transition duration-200"
+      />
+      <span className="border border-l-1 rounded-r-md px-3 py-2 text-gray-600 bg-gray-100">
+        Years
+      </span>
+    </div>
+    <p className="text-xs text-gray-500 mt-1">Total construction industry experience</p>
+  </div>
 
-            <div>
-              <label className="block text-sm font-medium mb-1">Leadership/Managerial *</label>
-              <div className="flex border rounded px-2 py-2 items-center justify-between focus-within:border-blue-500 focus-within:shadow-md transition duration-200">
-                <input
-                  type="number"
-                  placeholder="Years"
-                  className="w-full outline-none"
-                />
-                <span className="ml-2 text-sm">Years</span>
-              </div>
-              <p className="text-xs text-gray-500 mt-1">Experience in leadership roles</p>
-            </div>
-          </div>
+  {/* Leadership/Managerial */}
+  <div>
+    <label className="block text-sm font-medium mb-1">Leadership/Managerial *</label>
+    <div className="flex w-full">
+      <input
+        type="number"
+        placeholder="Enter years"
+        className="w-full border border-r-0 rounded-l-md px-4 py-2 focus:border-blue-500 focus:shadow-md focus:outline-none focus:ring-0 transition duration-200"
+      />
+      <span className="border border-l-1 rounded-r-md px-3 py-2 text-gray-600 bg-gray-100">
+        Years
+      </span>
+    </div>
+    <p className="text-xs text-gray-500 mt-1">Experience in leadership roles</p>
+  </div>
+</div>
+
         </div>
-        
         {/* Skills & Qualifications Section */}
         <div className="mb-8 bg-white px-3 py-2 rounded-md hover:shadow-lg">
           <h2 className="text-lg w-full bg-gray-100 px-4 py-3 rounded-t-md font-semibold text-gray-700 mb-4 -mx-3">
@@ -335,44 +421,68 @@ const ApplyForm = () => {
 
             <div>
               <label className="block text-sm font-medium mb-1">Expected Basic Salary *</label>
-              <div className="flex rounded border px-2 py-2 items-center gap-2 focus-within:border-blue-500 focus-within:shadow-md transition duration-200">
-                <span className="text-gray-600">SAR</span>
-                <input
-                  type="number"
-                  placeholder="Enter amount"
-                  className="w-full outline-none"
-                />
-              </div>
+             <div className="flex w-full mt-1">
+    
+    <span className="border border-r-0 rounded-l-md px-3 py-2 text-gray-600 bg-gray-100">
+      SAR
+    </span>
+
+    {/* Input field seamlessly joined */}
+    <input
+      type="number"
+      placeholder="Enter amount"
+      className="w-full border border-l-1 rounded-r-md px-4 py-2 focus:border-blue-500 focus:shadow-md focus:outline-none focus:ring-0 transition duration-200"
+    />
+  </div>
               <p className="text-xs text-gray-500 mt-1">Monthly basic salary expectation in Saudi Riyals</p>
             </div>
 
             <div>
               <label className="block text-sm font-medium mb-1">Expected Benefits *</label>
-              <div className="flex rounded border px-2 py-2 items-center gap-2 focus-within:border-blue-500 focus-within:shadow-md transition duration-200">
-                <span className="text-gray-600">SAR</span>
-                <input
-                  type="number"
-                  placeholder="Enter amount"
-                  className="w-full outline-none"
-                />
-              </div>
+             <div className="flex w-full mt-1">
+    {/* SAR label with matching border */}
+    <span className="border border-r-0 rounded-l-md px-3 py-2 text-gray-600 bg-gray-100">
+      SAR
+    </span>
+
+    {/* Input field seamlessly joined */}
+    <input
+      type="number"
+      placeholder="Enter amount"
+      className="w-full border border-l-1 rounded-r-md px-4 py-2 focus:border-blue-500 focus:shadow-md focus:outline-none focus:ring-0 transition duration-200"
+    />
+  </div>
               <p className="text-xs text-gray-500 mt-1">Expected monthly allowances and benefits in Saudi Riyals</p>
             </div>
 
-            <div>
-              <label className="block text-sm font-medium mb-1">Notice Period *</label>
-              <div className="flex w-full rounded border px-2 py-2 items-center gap-2 focus-within:border-blue-500 focus-within:shadow-md transition duration-200">
-                <input
-                  type="number"
-                  placeholder="Enter number of days"
-                  className="w-full outline-none"
-                />
-                <span className="text-gray-600">Days</span>
-              </div>
-            </div>
+         <div>
+  <label className="block text-sm font-medium mb-1">Notice Period *</label>
+  <div className="flex w-full">
+    <input
+      type="number"
+      placeholder="Enter the number of days"
+      className="flex-grow border border-r-0 rounded-l-md px-4 py-2 focus:border-blue-500 focus:shadow-md focus:outline-none focus:ring-0 transition duration-200"
+    />
+    <span className="border border-l-1 rounded-r-md px-3 py-2 text-gray-600 bg-gray-100">
+      Days
+    </span>
+  </div>
+  <p className="text-xs text-gray-500 mt-1">Enter 0 if available for immediate joining</p>
+</div>
+
           </div>
         </div>
-          
+           <div>
+            <label className="block text-sm font-medium mb-1">Your Motivation *</label>
+            <textarea
+              rows={4}
+              placeholder="Describe your motivation and what makes you a strong candidate for this position..."
+              className="w-full border rounded px-4 py-2 focus:border-blue-500 focus:shadow-md focus:outline-none focus:ring-0 transition duration-200"
+            />
+            <p className="text-xs text-gray-500 mt-1">
+              Highlight your key strengths and motivation for joining STED
+            </p>
+          </div>
         {/* Why Should We Hire You Section */}
         <div className="mb-8 bg-white px-3 py-2 rounded-md hover:shadow-lg">
           <h2 className="text-lg w-full bg-gray-100 px-4 py-3 rounded-t-md font-semibold text-gray-700 mb-4 -mx-3">
@@ -398,11 +508,16 @@ const ApplyForm = () => {
           </h2>
           <div>
             <label className="block text-sm font-medium mb-1">Upload Your CV *</label>
+            <div className="flex w-full mt-1">
+             <span className="border border-r-0 rounded-l-md px-3 py-2 text-gray-600 bg-gray-100">
+      Choose 
+    </span>
             <input
               type="file"
               accept=".pdf"
-              className="w-full border rounded px-4 py-2 focus:border-blue-500 focus:shadow-md focus:outline-none focus:ring-0 transition duration-200"
+              className="w-full border border-l-1 rounded-r-md px-4 py-2 focus:border-blue-500 focus:shadow-md focus:outline-none focus:ring-0 transition duration-200"
             />
+            </div>
             <ul className="text-xs text-gray-500 mt-2 list-disc list-inside">
               <li>Only PDF format accepted</li>
               <li>Maximum file size: 5MB</li>
