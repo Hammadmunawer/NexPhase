@@ -505,13 +505,10 @@ const ApplyForm = () => {
           
         {/* Why Should We Hire You Section */}
         <div className="mb-8 bg-white px-3 py-2 rounded-md hover:shadow-lg">
-  <h2 className="text-lg w-full bg-gray-100 px-4 py-3 rounded-t-md font-semibold text-gray-700 mb-4 -mx-3 flex items-center gap-2">
-    <StickyNote className="w-5 h-5 text-gray-700" />
-    Why Should We Hire You?
-  </h2>
+  
 
   <div>
-    <label className="block text-sm font-medium mb-2">Your Motivation *</label>
+    <label className="block text-sm font-medium mb-2">Why Should We Hire You? *</label>
     <textarea
       rows={4}
       placeholder="Describe your motivation and what makes you a strong candidate for this position..."
