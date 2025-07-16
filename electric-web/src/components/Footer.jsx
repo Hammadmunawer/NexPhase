@@ -20,14 +20,11 @@ const Footer = () => {
         <div className="md:col-span-2 space-y-6">
            <div className="flex items-center gap-6">
           <img
-            src="../../public/image/logo (2).png"
+            src="../../public/image/nexphase1.png"
             alt="Logo"
-            className="h-28 w-20"
+            className="h-30 w-36"
           />
-          <div className="hidden md:flex flex-col leading-5 text-sm">
-            <span>MEP Engineering & Specialized</span>
-            <span>Services</span>
-          </div>
+         
         </div>
           <div>
             <h4 className="font-semibold text-white mb-2">Growth Partners</h4>
