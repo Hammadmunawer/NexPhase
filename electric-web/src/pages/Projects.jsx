@@ -4,7 +4,7 @@ import DeliveredProjects from "../components/DeliveredProjects";
 import Gallery from "../components/Gallery";
 import ContactForm from "../components/ContactForm";
 import Testimonials from "../components/Testimonials";
-import { motion } from "framer-motion";
+
 
 function Projects() {
   const [showButton, setShowButton] = useState(false);

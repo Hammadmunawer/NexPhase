@@ -42,7 +42,7 @@ const ApplyForm = () => {
       <input
         type="text"
         placeholder="Enter your full name"
-        className="w-full border rounded px-4 py-2 focus:border-blue-500 focus:shadow-md focus:outline-none focus:ring-0 transition duration-200"
+        className="w-full border rounded px-4 py-2 border-gray-200 focus:shadow-md focus:outline-none focus:ring-0 transition duration-200"
       />
       <p className="text-xs text-gray-500 mt-1">
         Example: John William Smith
@@ -56,14 +56,14 @@ const ApplyForm = () => {
       <input
         type="text"
         placeholder="أدخل اسمك الكامل باللغة العربية"
-        className="w-full border rounded px-4 py-2 focus:border-blue-500 focus:shadow-md focus:outline-none focus:ring-0 transition duration-200"
+        className="w-full border rounded px-4 py-2 border-gray-200 focus:shadow-md focus:outline-none focus:ring-0 transition duration-200"
       />
     </div>
 
     {/* Nationality */}
     <div>
       <label className="block text-sm font-medium mb-2">Nationality *</label>
-      <select className="w-full border rounded px-4 py-2 focus:border-blue-500 focus:shadow-md focus:outline-none focus:ring-0 transition duration-200">
+      <select className="w-full border rounded px-4 py-2 border-gray-200 focus:shadow-md focus:outline-none focus:ring-0 transition duration-200">
         <option>Select your nationality</option>
         {countries.map((country, index) => (
           <option key={index}>{country}</option>
@@ -76,7 +76,7 @@ const ApplyForm = () => {
       <label className="block text-sm font-medium mb-2">
         Current Country of Residence *
       </label>
-      <select className="w-full border rounded px-4 py-2 focus:border-blue-500 focus:shadow-md focus:outline-none focus:ring-0 transition duration-200">
+      <select className="w-full border rounded px-4 py-2 border-gray-200 focus:shadow-md focus:outline-none focus:ring-0 transition duration-200">
         <option>Select your current country</option>
         {countries.map((country, index) => (
           <option key={index}>{country}</option>
@@ -91,13 +91,13 @@ const ApplyForm = () => {
       <label className="block text-sm font-medium mb-2">Date of Birth *</label>
       <input 
         type="date" 
-        className="w-full border rounded px-4 py-2 focus:border-blue-500 focus:shadow-md focus:outline-none focus:ring-0 transition duration-200" 
+        className="w-full border rounded px-4 py-2 border-gray-200 focus:shadow-md focus:outline-none focus:ring-0 transition duration-200" 
       />
     </div>
 
     <div>
       <label className="block text-sm font-medium mb-2">Gender *</label>
-      <select className="w-full border rounded px-4 py-2 focus:border-blue-500 focus:shadow-md focus:outline-none focus:ring-0 transition duration-200">
+      <select className="w-full border rounded px-4 py-2 border-gray-200 focus:shadow-md focus:outline-none focus:ring-0 transition duration-200">
         <option value="">Select Gender</option>
         <option>Male</option>
         <option>Female</option>
@@ -106,7 +106,7 @@ const ApplyForm = () => {
 
     <div>
       <label className="block text-sm font-medium mb-2">Marital Status *</label>
-      <select className="w-full border rounded px-4 py-2 focus:border-blue-500 focus:shadow-md focus:outline-none focus:ring-0 transition duration-200">
+      <select className="w-full border rounded px-4 py-2 border-gray-200 focus:shadow-md focus:outline-none focus:ring-0 transition duration-200">
         <option value="">Select Status</option>
         <option>Married</option>
         <option>Single</option>
@@ -120,7 +120,7 @@ const ApplyForm = () => {
       <input
         type="number"
         placeholder="Enter number"
-        className="w-full border rounded px-4 py-2 focus:border-blue-500 focus:shadow-md focus:outline-none focus:ring-0 transition duration-200"
+        className="w-full border rounded px-4 py-2 border-gray-200 focus:shadow-md focus:outline-none focus:ring-0 transition duration-200"
       />
       <p className="text-xs text-gray-500 mt-1">
         Include spouse and children
@@ -135,7 +135,7 @@ const ApplyForm = () => {
       <input
         type="email"
         placeholder="example@domain.com"
-        className="w-full border rounded px-4 py-2 focus:border-blue-500 focus:shadow-md focus:outline-none focus:ring-0 transition duration-200"
+        className="w-full border rounded px-4 py-2 border-gray-200 focus:shadow-md focus:outline-none focus:ring-0 transition duration-200"
       />
     </div>
 
@@ -144,7 +144,7 @@ const ApplyForm = () => {
       <input
         type="tel"
         placeholder="00966512345678"
-        className="w-full border rounded px-4 py-2 focus:border-blue-500 focus:shadow-md focus:outline-none focus:ring-0 transition duration-200"
+        className="w-full border rounded px-4 py-2 border-gray-200 focus:shadow-md focus:outline-none focus:ring-0 transition duration-200"
       />
       <p className="text-xs text-gray-500 mt-1">
         Format: 00 + country code + number
@@ -166,7 +166,7 @@ const ApplyForm = () => {
         Academic Qualification *
       </label>
       <select
-        className="w-full border rounded px-4 py-2 focus:border-blue-500 focus:shadow-md focus:outline-none focus:ring-0 transition duration-200"
+        className="w-full border rounded px-4 py-2 border-gray-200 focus:shadow-md focus:outline-none focus:ring-0 transition duration-200"
         defaultValue=""
       >
         <option className="bg-black text-white" value="" disabled>
@@ -195,7 +195,7 @@ const ApplyForm = () => {
       <input
         type="number"
         placeholder="YYYY"
-        className="w-full border rounded px-4 py-2 focus:border-blue-500 focus:shadow-md focus:outline-none focus:ring-0 transition duration-200"
+        className="w-full border rounded px-4 py-2 border-gray-200 focus:shadow-md focus:outline-none focus:ring-0 transition duration-200"
       />
     </div>
   </div>
@@ -204,7 +204,7 @@ const ApplyForm = () => {
     {/* Technical Specialization */}
     <div>
       <label className="block text-sm font-medium mb-2">Technical Specialization *</label>
-      <select className="w-full border rounded px-4 py-2 focus:border-blue-500 focus:shadow-md focus:outline-none focus:ring-0 transition duration-200">
+      <select className="w-full border rounded px-4 py-2 border-gray-200 focus:shadow-md focus:outline-none focus:ring-0 transition duration-200">
         <option>Select your primary field</option>
         <option>Civil Engineering</option>
         <option>Mechanical Engineering</option>
@@ -225,7 +225,7 @@ const ApplyForm = () => {
       <input
         type="text"
         placeholder="Type your current job title"
-        className="w-full border rounded px-4 py-2 focus:border-blue-500 focus:shadow-md focus:outline-none focus:ring-0 transition duration-200"
+        className="w-full border rounded px-4 py-2 border-gray-200 focus:shadow-md focus:outline-none focus:ring-0 transition duration-200"
       />
       <p className="text-xs text-gray-500 mt-1">
         Your current job title or role
@@ -240,7 +240,7 @@ const ApplyForm = () => {
     <input
       type="text"
       placeholder="Enter the position you're applying for at NEXPHASE"
-      className="w-full border rounded px-4 py-2 focus:border-blue-500 focus:shadow-md focus:outline-none focus:ring-0 transition duration-200"
+      className="w-full border rounded px-4 py-2 border-gray-200 focus:shadow-md focus:outline-none focus:ring-0 transition duration-200"
     />
     <p className="text-xs text-gray-500 mt-1">
       Specify your target role or position at NEXPHASE
@@ -262,7 +262,7 @@ const ApplyForm = () => {
     <input
       type="text"
       placeholder="Enter your current/job position"
-      className="w-full border rounded px-4 py-2 focus:border-blue-500 focus:shadow-md focus:outline-none focus:ring-0 transition duration-200"
+      className="w-full border rounded px-4 py-2 border-gray-200 focus:shadow-md focus:outline-none focus:ring-0 transition duration-200"
     />
     <p className="text-xs text-gray-500 mt-1">
       Your current or most recent job title before applying
@@ -276,13 +276,13 @@ const ApplyForm = () => {
       </label>
 
       <div className="flex w-full mt-1">
-        <span className="border border-r-0 rounded-l-md px-3 py-2 text-gray-600 bg-gray-100">
+        <span className="border border-gray-200 border-r-0 rounded-l-md px-3 py-2 text-gray-600 bg-gray-100">
           SAR
         </span>
         <input
           type="number"
           placeholder="Enter amount"
-          className="w-full border border-l-1 rounded-r-md px-4 py-2 focus:border-blue-500 focus:shadow-md focus:outline-none focus:ring-0 transition duration-200"
+          className="w-full border border-l-1 rounded-r-md px-4 py-2 border-gray-200 focus:shadow-md focus:outline-none focus:ring-0 transition duration-200"
         />
       </div>
 
@@ -294,13 +294,13 @@ const ApplyForm = () => {
     <div>
       <label className="block text-sm font-medium mb-2">Current/Previous Benefits</label>
       <div className="flex w-full mt-1">
-        <span className="border border-r-0 rounded-l-md px-3 py-2 text-gray-600 bg-gray-100">
+        <span className="border border-gray-200 border-r-0 rounded-l-md px-3 py-2 text-gray-600 bg-gray-100">
           SAR
         </span>
         <input
           type="number"
           placeholder="Enter amount"
-          className="w-full border border-l-1 rounded-r-md px-4 py-2 focus:border-blue-500 focus:shadow-md focus:outline-none focus:ring-0 transition duration-200"
+          className="w-full border border-l-1 rounded-r-md px-4 py-2 border-gray-200 focus:shadow-md focus:outline-none focus:ring-0 transition duration-200"
         />
       </div>
       <p className="text-xs text-gray-500 mt-1">
@@ -318,9 +318,9 @@ const ApplyForm = () => {
         <input
           type="number"
           placeholder="Enter years"
-          className="w-full border border-r-0 rounded-l-md px-4 py-2 focus:border-blue-500 focus:shadow-md focus:outline-none focus:ring-0 transition duration-200"
+          className="w-full border border-r-0 rounded-l-md px-4 py-2 border-gray-200 focus:shadow-md focus:outline-none focus:ring-0 transition duration-200"
         />
-        <span className="border border-l-1 rounded-r-md px-3 py-2 text-gray-600 bg-gray-100">
+        <span className="border border-gray-200 border-l-1 rounded-r-md px-3 py-2 text-gray-600 bg-gray-100">
           Years
         </span>
       </div>
@@ -333,9 +333,9 @@ const ApplyForm = () => {
         <input
           type="number"
           placeholder="Enter years"
-          className="w-full border border-r-0 rounded-l-md px-4 py-2 focus:border-blue-500 focus:shadow-md focus:outline-none focus:ring-0 transition duration-200"
+          className="w-full border border-r-0 rounded-l-md px-4 py-2 border-gray-200 focus:shadow-md focus:outline-none focus:ring-0 transition duration-200"
         />
-        <span className="border border-l-1 rounded-r-md px-3 py-2 text-gray-600 bg-gray-100">
+        <span className="border border-gray-200 border-l-1 rounded-r-md px-3 py-2 text-gray-600 bg-gray-100">
           Years
         </span>
       </div>
@@ -348,9 +348,9 @@ const ApplyForm = () => {
         <input
           type="number"
           placeholder="Enter years"
-          className="w-full border border-r-0 rounded-l-md px-4 py-2 focus:border-blue-500 focus:shadow-md focus:outline-none focus:ring-0 transition duration-200"
+          className="w-full border border-r-0 rounded-l-md px-4 py-2 border-gray-200 focus:shadow-md focus:outline-none focus:ring-0 transition duration-200"
         />
-        <span className="border border-l-1 rounded-r-md px-3 py-2 text-gray-600 bg-gray-100">
+        <span className="border border-gray-200 border-l-1 rounded-r-md px-3 py-2 text-gray-600 bg-gray-100">
           Years
         </span>
       </div>
@@ -369,7 +369,7 @@ const ApplyForm = () => {
   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
     <div>
       <label className="block text-sm font-medium mb-2">English Proficiency *</label>
-      <select className="w-full border rounded px-4 py-2 focus:border-blue-500 focus:shadow-md focus:outline-none focus:ring-0 transition duration-200">
+      <select className="w-full border rounded px-4 py-2 border-gray-200 focus:shadow-md focus:outline-none focus:ring-0 transition duration-200">
         <option>Select proficiency level</option>
         <option>Beginner</option>
         <option>Intermediate</option>
@@ -386,7 +386,7 @@ const ApplyForm = () => {
       <input
         type="text"
         placeholder="E.g., AutoCAD, Revit, MS Office, BIM 360"
-        className="w-full border rounded px-4 py-2 focus:border-blue-500 focus:shadow-md focus:outline-none focus:ring-0 transition duration-200"
+        className="w-full border rounded px-4 py-2 border-gray-200 focus:shadow-md focus:outline-none focus:ring-0 transition duration-200"
       />
       <p className="text-xs text-gray-500 mt-1">
         List software and technical tools you are proficient in
@@ -395,7 +395,7 @@ const ApplyForm = () => {
 
     <div>
       <label className="block text-sm font-medium mb-2">Testing & Commissioning Role *</label>
-      <select className="w-full border rounded px-4 py-2 focus:border-blue-500 focus:shadow-md focus:outline-none focus:ring-0 transition duration-200">
+      <select className="w-full border rounded px-4 py-2 border-gray-200 focus:shadow-md focus:outline-none focus:ring-0 transition duration-200">
         <option>Select your preference</option>
         <option>IntereNEXPHASE</option>
         <option>Not IntereNEXPHASE</option>
@@ -407,7 +407,7 @@ const ApplyForm = () => {
 
     <div>
       <label className="block text-sm font-medium mb-2">QA/QC Role *</label>
-      <select className="w-full border rounded px-4 py-2 focus:border-blue-500 focus:shadow-md focus:outline-none focus:ring-0 transition duration-200">
+      <select className="w-full border rounded px-4 py-2 border-gray-200 focus:shadow-md focus:outline-none focus:ring-0 transition duration-200">
         <option>Select your preference</option>
         <option>Very IntereNEXPHASE</option>
         <option>IntereNEXPHASE</option>
@@ -431,7 +431,7 @@ const ApplyForm = () => {
   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
     <div>
       <label className="block text-sm font-medium mb-2">Iqama Status</label>
-      <select className="w-full border rounded px-4 py-2 focus:border-blue-500 focus:shadow-md focus:outline-none focus:ring-0 transition duration-200">
+      <select className="w-full border rounded px-4 py-2 border-gray-200 focus:shadow-md focus:outline-none focus:ring-0 transition duration-200">
         <option>Select status...</option>
         <option>Transferable</option>
         <option>Non-transferable</option>
@@ -445,7 +445,7 @@ const ApplyForm = () => {
       <label className="block text-sm font-medium mb-2">Expected Join Date *</label>
       <input
         type="date"
-        className="w-full border rounded px-4 py-2 focus:border-blue-500 focus:shadow-md focus:outline-none focus:ring-0 transition duration-200"
+        className="w-full border rounded px-4 py-2 border-gray-200 focus:shadow-md focus:outline-none focus:ring-0 transition duration-200"
       />
       <p className="text-xs text-gray-500 mt-1">Earliest date you can start working</p>
     </div>
@@ -453,13 +453,13 @@ const ApplyForm = () => {
     <div>
       <label className="block text-sm font-medium mb-2">Expected Basic Salary *</label>
       <div className="flex w-full mt-1">
-        <span className="border border-r-0 rounded-l-md px-3 py-2 text-gray-600 bg-gray-100">
+        <span className="border border-gray-200 border-r-0 rounded-l-md px-3 py-2 text-gray-600 bg-gray-100">
           SAR
         </span>
         <input
           type="number"
           placeholder="Enter amount"
-          className="w-full border border-l-1 rounded-r-md px-4 py-2 focus:border-blue-500 focus:shadow-md focus:outline-none focus:ring-0 transition duration-200"
+          className="w-full border border-l-1 rounded-r-md px-4 py-2 border-gray-200 focus:shadow-md focus:outline-none focus:ring-0 transition duration-200"
         />
       </div>
       <p className="text-xs text-gray-500 mt-1">
@@ -470,13 +470,13 @@ const ApplyForm = () => {
     <div>
       <label className="block text-sm font-medium mb-2">Expected Benefits *</label>
       <div className="flex w-full mt-1">
-        <span className="border border-r-0 rounded-l-md px-3 py-2 text-gray-600 bg-gray-100">
+        <span className="border border-r-0 border-gray-200 rounded-l-md px-3 py-2 text-gray-600 bg-gray-100">
           SAR
         </span>
         <input
           type="number"
           placeholder="Enter amount"
-          className="w-full border border-l-1 rounded-r-md px-4 py-2 focus:border-blue-500 focus:shadow-md focus:outline-none focus:ring-0 transition duration-200"
+          className="w-full border border-l-1 rounded-r-md px-4 py-2 border-gray-200 focus:shadow-md focus:outline-none focus:ring-0 transition duration-200"
         />
       </div>
       <p className="text-xs text-gray-500 mt-1">
@@ -490,9 +490,9 @@ const ApplyForm = () => {
         <input
           type="number"
           placeholder="Enter the number of days"
-          className="flex-grow border border-r-0 rounded-l-md px-4 py-2 focus:border-blue-500 focus:shadow-md focus:outline-none focus:ring-0 transition duration-200"
+          className="flex-grow border border-r-0 rounded-l-md px-4 py-2 border-gray-200 focus:shadow-md focus:outline-none focus:ring-0 transition duration-200"
         />
-        <span className="border border-l-1 rounded-r-md px-3 py-2 text-gray-600 bg-gray-100">
+        <span className="border border-l-1 border-gray-200 rounded-r-md px-3 py-2 text-gray-600 bg-gray-100">
           Days
         </span>
       </div>
@@ -512,7 +512,7 @@ const ApplyForm = () => {
     <textarea
       rows={4}
       placeholder="Describe your motivation and what makes you a strong candidate for this position..."
-      className="w-full border rounded px-4 py-2 focus:border-blue-500 focus:shadow-md focus:outline-none focus:ring-0 transition duration-200"
+      className="w-full border rounded px-4 py-2 border-gray-200 focus:shadow-md focus:outline-none focus:ring-0 transition duration-200"
     />
     <p className="text-xs text-gray-500 mt-1">
       Highlight your key strengths and motivation for joining NEXPHASE
@@ -530,13 +530,13 @@ const ApplyForm = () => {
   <div>
     <label className="block text-sm font-medium mb-2">Upload Your CV *</label>
     <div className="flex w-full mt-1">
-      <span className="border border-r-0 rounded-l-md px-3 py-2 text-gray-600 bg-gray-100">
+      <span className="border border-gray-200 rounded-l-md px-3 py-2 text-gray-600 bg-gray-100">
         Choose
       </span>
       <input
         type="file"
         accept=".pdf"
-        className="w-full border border-l-1 rounded-r-md px-4 py-2 focus:border-blue-500 focus:shadow-md focus:outline-none focus:ring-0 transition duration-200"
+        className="w-full border border-l-1 rounded-r-md px-4 py-2 border-gray-200 focus:shadow-md focus:outline-none focus:ring-0 transition duration-200"
       />
     </div>
     <ul className="text-xs text-gray-500 mt-2 list-disc list-inside">

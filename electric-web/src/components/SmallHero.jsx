@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { motion } from "framer-motion";
+
 
 const SmallHero = ({
   backgroundImage = "/image/water1.jpg",

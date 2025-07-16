@@ -1,5 +1,4 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+
 
 const fadeInVariant = {
   hidden: { opacity: 0, y: 30 },

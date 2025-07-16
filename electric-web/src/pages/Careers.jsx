@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+
 import Hero from "../components/Hero";
 import { Link } from "react-router-dom";
 
@@ -63,6 +63,15 @@ function Careers() {
           building management system, premises performance and stakeholders’
           reward.
         </p>
+         <div className="mt-10 flex justify-center">
+          <button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="px-6 py-2 text-white border-2 border-[#00ADB1] rounded transition-transform duration-300 hover:text-[#F16624]"
+          >
+            Email HR
+          </button>
+        </div>
       </div>
 
       <div

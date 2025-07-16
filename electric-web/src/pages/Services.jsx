@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Hero from "../components/Hero";
 import Testing from "../components/Testing";
-import ContactForm from "../components/ContactForm";
+
 import Testimonials from "../components/Testimonials";
-import { motion } from "framer-motion";
+
 
 function Services() {
   const [showButton, setShowButton] = useState(false);

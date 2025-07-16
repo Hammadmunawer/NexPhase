@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+
 import Faq from "../components/Faq";
 import ContactForm from "../components/ContactForm";
 import White from "../components/White";
@@ -7,7 +7,7 @@ import SmallHero from "../components/SmallHero";
 import Faq2 from "../components/Faq2";
 import Companycase2 from "../components/Companycase2";
 import { useNavigate } from "react-router-dom";
-import Team from "../components/Team";
+
 import Testimonials from "../components/Testimonials";
 import LogoSlider from "../components/LogoSlider";
 

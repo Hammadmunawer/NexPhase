@@ -17,18 +17,16 @@ const Navbar = () => {
 
   return (
     <header className="bg-[#04182B] text-white w-full">
-      <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+<div className="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
         {/* Left - Logo Image and Tagline */}
         <div className="flex items-center gap-6">
           <img
-            src="../../public/image/logo (2).png"
-            alt="Logo"
-            className="h-18 w-16"
-          />
-          <div className="hidden md:flex flex-col leading-5 text-sm">
-            <span>MEP Engineering & Specialized</span>
-            <span>Services</span>
-          </div>
+  src="../../public/image/nexphase1.png"
+  alt="Logo"
+  className="h-54 w-42 object-contain"
+/>
+
+          
         </div>
 
         {/* Desktop Navigation */}

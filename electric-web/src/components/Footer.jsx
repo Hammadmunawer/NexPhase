@@ -22,7 +22,7 @@ const Footer = () => {
           <img
             src="../../public/image/logo (2).png"
             alt="Logo"
-            className="h-18 w-16"
+            className="h-28 w-20"
           />
           <div className="hidden md:flex flex-col leading-5 text-sm">
             <span>MEP Engineering & Specialized</span>
