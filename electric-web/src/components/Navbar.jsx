@@ -89,7 +89,7 @@ const Navbar = () => {
           ))}
           <div className="flex gap-2 mt-2">
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/company/nexphase-electrical-co-ltd/"
               className="bg-[#1DB7B2] p-1.5 rounded-full"
               target="_blank"
               rel="noopener noreferrer"
@@ -97,7 +97,7 @@ const Navbar = () => {
               <Linkedin size={18} className="text-[#04182B]" />
             </a>
             <a
-              href="https://facebook.com"
+              href="https://www.facebook.com/share/16ksfHxL7q/?mibextid=wwXIfr"
               className="bg-[#1DB7B2] p-1.5 rounded-full"
               target="_blank"
               rel="noopener noreferrer"
