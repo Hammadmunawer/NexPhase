@@ -22,7 +22,7 @@ const Footer = () => {
           <img
             src="../../public/image/nexphase1.png"
             alt="Logo"
-            className="h-30 w-36"
+            className="h-32 w-40"
           />
          
         </div>

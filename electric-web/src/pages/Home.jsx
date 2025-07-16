@@ -37,7 +37,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="w-full">
+    <div className="w-full" id="home">
       {/* Background Video Section */}
       <div className="relative h-[100vh] overflow-hidden">
         <video

@@ -21,10 +21,10 @@ const Navbar = () => {
         {/* Left - Logo Image and Tagline */}
         <div className="flex items-center gap-6">
           <img
-  src="../../public/image/nexphase1.png"
-  alt="Logo"
-  className="h-54 w-42 object-contain"
-/>
+            src="../../public/image/nexphase1.png"
+            alt="Logo"
+            className="h-50 w-52 object-contain"
+          />
 
           
         </div>

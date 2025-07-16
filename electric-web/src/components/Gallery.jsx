@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 
-
 const images = [
   "/image/10.png",
   "/image/11.png",
@@ -13,22 +12,11 @@ const images = [
   "/image/18.png",
 ];
 
-const fadeIn = {
-  hidden: { opacity: 0, y: 30 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
-};
-
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState(null);
 
   return (
-    <div
-      className="py-16 px-4 text-center"
-      variants={fadeIn}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true }}
-    >
+    <div className="py-16 px-4 text-center">
       {/* Top Dots */}
       <div className="flex justify-center gap-3 mb-6">
         <div className="w-4 h-4 bg-[#00ADB1] rounded-full" />
@@ -49,42 +37,29 @@ const Gallery = () => {
             alt={`Gallery ${index + 1}`}
             className="cursor-pointer rounded-md object-cover w-full h-60 hover:opacity-90 transition"
             onClick={() => setSelectedImage(img)}
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
           />
         ))}
       </div>
 
       {/* Modal */}
-      <AnimatePresence>
-        {selectedImage && (
-          <div
-            className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+      {selectedImage && (
+        <div className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50">
+          {/* Close Button */}
+          <button
+            onClick={() => setSelectedImage(null)}
+            className="absolute top-6 right-6 text-white text-3xl font-bold z-50 hover:text-red-400"
           >
-            {/* Close Button */}
-            <button
-              onClick={() => setSelectedImage(null)}
-              className="absolute top-6 right-6 text-white text-3xl font-bold z-50 hover:text-red-400"
-            >
-              &times;
-            </button>
+            &times;
+          </button>
 
-            {/* Image with zoom animation */}
-            <img
-              src={selectedImage}
-              alt="Selected"
-              className="max-w-[90%] max-h-[80%] rounded-lg shadow-lg"
-              initial={{ scale: 0.5, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.5, opacity: 0 }}
-              transition={{ duration: 0.4 }}
-            />
-          </div>
-        )}
-      </AnimatePresence>
+          {/* Selected Image */}
+          <img
+            src={selectedImage}
+            alt="Selected"
+            className="max-w-[90%] max-h-[80%] rounded-lg shadow-lg"
+          />
+        </div>
+      )}
     </div>
   );
 };
