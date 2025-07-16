@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Linkedin, Facebook, Menu, X } from "lucide-react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,16 +17,16 @@ const Navbar = () => {
 
   return (
     <header className="bg-[#04182B] text-white w-full">
-<div className="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
         {/* Left - Logo Image and Tagline */}
         <div className="flex items-center gap-6">
-          <img
-            src="../../public/image/nexphase1.png"
-            alt="Logo"
-            className="h-50 w-52 object-contain"
-          />
-
-          
+          <Link to="/">
+            <img
+              src="../../public/image/nexphase1.png"
+              alt="Logo"
+              className="h-50 w-52 object-contain"
+            />
+          </Link>
         </div>
 
         {/* Desktop Navigation */}
